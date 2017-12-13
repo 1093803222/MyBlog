@@ -1,0 +1,266 @@
+Index: application/indexRoute.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- application/indexRoute.php	(revision 10)
++++ application/indexRoute.php	(revision )
+@@ -14,8 +14,6 @@
+ Route::rule('index','index/show.Index/index');
+ //首页文章数据
+ Route::rule('indexArticleList','index/api.Index/getArticleListApi');
+-//首页文章数据
+-Route::rule('getArticleCommentPageApi','index/api.Index/getArticleCommentPageApi');
+ 
+ //文章列表页
+ Route::rule('article','index/show.Article/index');
+@@ -25,6 +23,8 @@
+ Route::rule('getArticleType','index/api.Article/getArticleType');
+ //文章评论
+ Route::rule('articleCommentApi','index/api.Article/articleCommentApi');
++//首页文章数据
++Route::rule('getArticleCommentPageApi','index/api.Article/getArticleCommentPageApi');
+ 
+ //资源页
+ Route::rule('resource','index/show.Resource/index');
+Index: runtime/log/201708/23.log
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- runtime/log/201708/23.log	(revision 10)
++++ runtime/log/201708/23.log	(revision )
+@@ -27641,3 +27641,233 @@
+ [ sql ] [ SQL ] SELECT `admin` FROM `blog_weibo` WHERE  `admin` = 'admin'  AND `uid` = 3031624497 LIMIT 1 [ RunTime:0.000379s ]
+ [ sql ] [ SQL ] SHOW COLUMNS FROM `blog_author_about` [ RunTime:0.021706s ]
+ [ sql ] [ SQL ] SELECT `top_img`,`name`,`introduce`,`address`,`qq_link`,`email_link`,`sina_link`,`git_link` FROM `blog_author_about` LIMIT 1 [ RunTime:0.000363s ]
++---------------------------------------------------------------
++[ 2017-08-23T20:51:56+08:00 ] 127.0.0.1 127.0.0.1 GET /detail/19.html
++[ info ] lei.cn/detail/19.html [运行时间：0.265698s][吞吐率：3.76req/s] [内存消耗：2,842.35kb] [文件加载：62]
++[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
++[ info ] [ ROUTE ] array (
++  'type' => 'module',
++  'module' => 
++  array (
++    0 => 'index',
++    1 => 'show.Article',
++    2 => 'detail',
++  ),
++  'convert' => false,
++)
++[ info ] [ HEADER ] array (
++  'cookie' => 'PHPSESSID=igbm0pk2hehtkrni04780be6r1; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
++  'accept-language' => 'zh-CN,zh;q=0.8',
++  'accept-encoding' => 'gzip, deflate',
++  'referer' => 'http://lei.cn/article.html',
++  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
++  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
++  'upgrade-insecure-requests' => '1',
++  'cache-control' => 'max-age=0',
++  'connection' => 'close',
++  'host' => 'lei.cn',
++)
++[ info ] [ PARAM ] array (
++  'id' => '19',
++)
++[ info ] [ SESSION ] INIT array (
++  'id' => '',
++  'var_session_id' => '',
++  'prefix' => 'think',
++  'type' => '',
++  'auto_start' => true,
++)
++[ info ] [ DB ] INIT mysql
++[ info ] [ RUN ] app\index\controller\show\Article->detail[ F:\halloword\xinleiBlog\application\index\controller\show\Article.php ]
++[ info ] [ CACHE ] INIT File
++[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/index\view\show\_article\detail.html [ array (
++  0 => 'admin',
++  1 => 'name',
++  2 => 'top',
++  3 => 'fileName',
++  4 => 'title',
++  5 => 'myData',
++  6 => 'typeData',
++  7 => 'detailData',
++  8 => 'randArticle',
++  9 => 'comment',
++  10 => 'id',
++) ]
++[ info ] [ LOG ] INIT File
++[ sql ] [ DB ] CONNECT:[ UseTime:0.017000s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
++[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_weibo` [ RunTime:0.049380s ]
++[ sql ] [ SQL ] SELECT `admin` FROM `blog_weibo` WHERE  `admin` = 'admin'  AND `uid` = 3031624497 LIMIT 1 [ RunTime:0.000350s ]
++[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_author_about` [ RunTime:0.027337s ]
++[ sql ] [ SQL ] SELECT `top_img`,`name`,`introduce`,`address`,`qq_link`,`email_link`,`sina_link`,`git_link` FROM `blog_author_about` LIMIT 1 [ RunTime:0.000395s ]
++[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article_type` [ RunTime:0.035688s ]
++[ sql ] [ SQL ] SELECT * FROM `blog_article_type` [ RunTime:0.000262s ]
++[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.026528s ]
++[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`content`,`a`.`description`,`a`.`cover`,`a`.`edit_time`,`a`.`click`,`a`.`delete`,`u`.`name` FROM `blog_article` `a` LEFT JOIN `blog_user` `u` ON `a`.`user_id`=`u`.`id` WHERE  `a`.`id` = '19' LIMIT 1 [ RunTime:0.000965s ]
++[ sql ] [ SQL ] UPDATE `blog_article`  SET `click`=38  WHERE  `id` = 19 [ RunTime:0.000352s ]
++[ sql ] [ SQL ] SELECT `id`,`title` FROM `blog_article` WHERE  (  `delete` is null OR `delete` = '' ) ORDER BY rand() LIMIT 10 [ RunTime:0.001426s ]
++[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article_comment` [ RunTime:0.048110s ]
++[ sql ] [ SQL ] SELECT * FROM `blog_article_comment` WHERE  `pid` = 0  AND `article_id` = 19 ORDER BY time desc LIMIT 0,3 [ RunTime:0.000369s ]
++[ sql ] [ SQL ] SELECT * FROM `blog_article_comment` WHERE  `pid` <> 0  AND `article_id` = 19 ORDER BY time desc [ RunTime:0.000240s ]
++---------------------------------------------------------------
++[ 2017-08-23T20:52:00+08:00 ] 127.0.0.1 127.0.0.1 POST /getArticleCommentPageApi.html
++[ info ] lei.cn/getArticleCommentPageApi.html [运行时间：0.088869s][吞吐率：11.25req/s] [内存消耗：2,073.66kb] [文件加载：51]
++[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
++[ info ] [ ROUTE ] array (
++  'type' => 'module',
++  'module' => 
++  array (
++    0 => 'index',
++    1 => 'api.Index',
++    2 => 'getArticleCommentPageApi',
++  ),
++  'convert' => false,
++)
++[ info ] [ HEADER ] array (
++  'cookie' => 'PHPSESSID=igbm0pk2hehtkrni04780be6r1; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
++  'accept-language' => 'zh-CN,zh;q=0.8',
++  'accept-encoding' => 'gzip, deflate',
++  'referer' => 'http://lei.cn/detail/19.html',
++  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
++  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
++  'x-requested-with' => 'XMLHttpRequest',
++  'origin' => 'http://lei.cn',
++  'accept' => '*/*',
++  'content-length' => '16',
++  'connection' => 'close',
++  'host' => 'lei.cn',
++)
++[ info ] [ PARAM ] array (
++  'pageSize' => '3',
++  'id' => '19',
++)
++[ info ] [ SESSION ] INIT array (
++  'id' => '',
++  'var_session_id' => '',
++  'prefix' => 'think',
++  'type' => '',
++  'auto_start' => true,
++)
++[ info ] [ DB ] INIT mysql
++[ info ] [ LOG ] INIT File
++[ sql ] [ DB ] CONNECT:[ UseTime:0.010590s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
++[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_weibo` [ RunTime:0.023200s ]
++[ sql ] [ SQL ] SELECT `admin` FROM `blog_weibo` WHERE  `admin` = 'admin'  AND `uid` = 3031624497 LIMIT 1 [ RunTime:0.000314s ]
++[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_author_about` [ RunTime:0.019014s ]
++[ sql ] [ SQL ] SELECT `top_img`,`name`,`introduce`,`address`,`qq_link`,`email_link`,`sina_link`,`git_link` FROM `blog_author_about` LIMIT 1 [ RunTime:0.000355s ]
++---------------------------------------------------------------
++[ 2017-08-23T20:53:10+08:00 ] 127.0.0.1 127.0.0.1 GET /detail/19.html
++[ info ] lei.cn/detail/19.html [运行时间：0.178492s][吞吐率：5.60req/s] [内存消耗：2,842.20kb] [文件加载：62]
++[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
++[ info ] [ ROUTE ] array (
++  'type' => 'module',
++  'module' => 
++  array (
++    0 => 'index',
++    1 => 'show.Article',
++    2 => 'detail',
++  ),
++  'convert' => false,
++)
++[ info ] [ HEADER ] array (
++  'cookie' => 'PHPSESSID=igbm0pk2hehtkrni04780be6r1; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
++  'accept-language' => 'zh-CN,zh;q=0.8',
++  'accept-encoding' => 'gzip, deflate',
++  'referer' => 'http://lei.cn/article.html',
++  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
++  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
++  'upgrade-insecure-requests' => '1',
++  'cache-control' => 'max-age=0',
++  'connection' => 'close',
++  'host' => 'lei.cn',
++)
++[ info ] [ PARAM ] array (
++  'id' => '19',
++)
++[ info ] [ SESSION ] INIT array (
++  'id' => '',
++  'var_session_id' => '',
++  'prefix' => 'think',
++  'type' => '',
++  'auto_start' => true,
++)
++[ info ] [ DB ] INIT mysql
++[ info ] [ RUN ] app\index\controller\show\Article->detail[ F:\halloword\xinleiBlog\application\index\controller\show\Article.php ]
++[ info ] [ CACHE ] INIT File
++[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/index\view\show\_article\detail.html [ array (
++  0 => 'admin',
++  1 => 'name',
++  2 => 'top',
++  3 => 'fileName',
++  4 => 'title',
++  5 => 'myData',
++  6 => 'typeData',
++  7 => 'detailData',
++  8 => 'randArticle',
++  9 => 'comment',
++  10 => 'id',
++) ]
++[ info ] [ LOG ] INIT File
++[ sql ] [ DB ] CONNECT:[ UseTime:0.011999s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
++[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_weibo` [ RunTime:0.029629s ]
++[ sql ] [ SQL ] SELECT `admin` FROM `blog_weibo` WHERE  `admin` = 'admin'  AND `uid` = 3031624497 LIMIT 1 [ RunTime:0.000876s ]
++[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_author_about` [ RunTime:0.022704s ]
++[ sql ] [ SQL ] SELECT `top_img`,`name`,`introduce`,`address`,`qq_link`,`email_link`,`sina_link`,`git_link` FROM `blog_author_about` LIMIT 1 [ RunTime:0.000280s ]
++[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article_type` [ RunTime:0.022594s ]
++[ sql ] [ SQL ] SELECT * FROM `blog_article_type` [ RunTime:0.000410s ]
++[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.023232s ]
++[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`content`,`a`.`description`,`a`.`cover`,`a`.`edit_time`,`a`.`click`,`a`.`delete`,`u`.`name` FROM `blog_article` `a` LEFT JOIN `blog_user` `u` ON `a`.`user_id`=`u`.`id` WHERE  `a`.`id` = '19' LIMIT 1 [ RunTime:0.001462s ]
++[ sql ] [ SQL ] UPDATE `blog_article`  SET `click`=39  WHERE  `id` = 19 [ RunTime:0.000336s ]
++[ sql ] [ SQL ] SELECT `id`,`title` FROM `blog_article` WHERE  (  `delete` is null OR `delete` = '' ) ORDER BY rand() LIMIT 10 [ RunTime:0.001147s ]
++[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article_comment` [ RunTime:0.017836s ]
++[ sql ] [ SQL ] SELECT * FROM `blog_article_comment` WHERE  `pid` = 0  AND `article_id` = 19 ORDER BY time desc LIMIT 0,3 [ RunTime:0.000565s ]
++[ sql ] [ SQL ] SELECT * FROM `blog_article_comment` WHERE  `pid` <> 0  AND `article_id` = 19 ORDER BY time desc [ RunTime:0.000275s ]
++---------------------------------------------------------------
++[ 2017-08-23T20:53:11+08:00 ] 127.0.0.1 127.0.0.1 POST /getArticleCommentPageApi.html
++[ info ] lei.cn/getArticleCommentPageApi.html [运行时间：0.118179s][吞吐率：8.46req/s] [内存消耗：2,339.31kb] [文件加载：52]
++[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
++[ info ] [ ROUTE ] array (
++  'type' => 'module',
++  'module' => 
++  array (
++    0 => 'index',
++    1 => 'api.Article',
++    2 => 'getArticleCommentPageApi',
++  ),
++  'convert' => false,
++)
++[ info ] [ HEADER ] array (
++  'cookie' => 'PHPSESSID=igbm0pk2hehtkrni04780be6r1; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
++  'accept-language' => 'zh-CN,zh;q=0.8',
++  'accept-encoding' => 'gzip, deflate',
++  'referer' => 'http://lei.cn/detail/19.html',
++  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
++  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
++  'x-requested-with' => 'XMLHttpRequest',
++  'origin' => 'http://lei.cn',
++  'accept' => '*/*',
++  'content-length' => '16',
++  'connection' => 'close',
++  'host' => 'lei.cn',
++)
++[ info ] [ PARAM ] array (
++  'pageSize' => '3',
++  'id' => '19',
++)
++[ info ] [ SESSION ] INIT array (
++  'id' => '',
++  'var_session_id' => '',
++  'prefix' => 'think',
++  'type' => '',
++  'auto_start' => true,
++)
++[ info ] [ DB ] INIT mysql
++[ info ] [ RUN ] app\index\controller\api\Article->getArticleCommentPageApi[ F:\halloword\xinleiBlog\application\index\controller\api\Article.php ]
++[ info ] [ LOG ] INIT File
++[ sql ] [ DB ] CONNECT:[ UseTime:0.011319s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
++[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_weibo` [ RunTime:0.028330s ]
++[ sql ] [ SQL ] SELECT `admin` FROM `blog_weibo` WHERE  `admin` = 'admin'  AND `uid` = 3031624497 LIMIT 1 [ RunTime:0.000339s ]
++[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_author_about` [ RunTime:0.023444s ]
++[ sql ] [ SQL ] SELECT `top_img`,`name`,`introduce`,`address`,`qq_link`,`email_link`,`sina_link`,`git_link` FROM `blog_author_about` LIMIT 1 [ RunTime:0.000288s ]
++[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article_comment` [ RunTime:0.018280s ]
++[ sql ] [ SQL ] SELECT * FROM `blog_article_comment` WHERE  `pid` = 0  AND `article_id` = 19 ORDER BY time desc LIMIT 3,3 [ RunTime:0.000340s ]
++[ sql ] [ SQL ] SELECT * FROM `blog_article_comment` WHERE  `pid` <> 0  AND `article_id` = 19 ORDER BY time desc [ RunTime:0.000287s ]

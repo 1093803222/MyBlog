@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; Charset=gb2312">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <title>不落阁 - 第三方登陆</title>
+    <link rel="shortcut icon" href="__index__/images/Logo_40.png" type="image/x-icon">
+    <!--Layui-->
+    <link href="__index__/plug/layui/css/layui.css" rel="stylesheet"/>
+    <!--font-awesome-->
+    <link href="__index__/plug/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <style>
+        .box {
+            width: 400px;
+            margin: 2% auto
+        }
+
+        .img {
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: 0 2%;
+            border-radius: 50%;
+        }
+        .qq .img{
+            border: 3px solid #00b7ee;
+        }
+        .weibo .img{
+            border: 3px solid #cc324b;
+        }
+        .weixin .img{
+            border: 3px solid #00ff00;
+        }
+
+        .qq {
+            color:#00b7ee;
+        }
+        .weibo {
+            color:#cc324b;
+        }
+        .weixin {
+            color:#00ff00;
+        }
+        .img i {
+            padding: 20px 20px 20px 20px;
+        }
+
+        .qq .img:hover{
+            cursor: pointer;
+            color:#fff;
+            background-color: #00b7ee;
+        }
+        .weibo .img:hover{
+            cursor: pointer;
+            color:#fff;
+            background-color: #cc324b;
+        }
+        .weixin .img:hover{
+            cursor: pointer;
+            color:#fff;
+            background-color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+
+    {if condition="!isset($_GET['code'])"}
+    <a class="qq">
+        <div class="img">
+            <i class="fa fa-qq fa-4x"></i>
+        </div>
+    </a>
+    <a class="weibo" href="javascript:;" title="新浪微博登陆">
+        <div class="img">
+            <i class="fa fa-weibo fa-4x"></i>
+        </div>
+    </a>
+    <a class="weixin">
+        <div class="img">
+            <i class="fa fa-weixin fa-4x"></i>
+        </div>
+    </a>
+    {else /}
+    <style type="text/css">
+        .box{border:2px solid #c2c2c2; height:500px; width:500px; margin-top:7%;
+            -webkit-border-radius:5px;
+            -moz-border-radius:5px;
+            border-radius:5%;}
+        .icon{width:150px;margin:10% 0 0 15%;}
+        .message{margin:0% 0 0 10%;}
+        .message a:hover{color:#00b7ee}
+        .message a{text-decoration:underline;}
+    </style>
+    <!--<div class="icon">-->
+        <!--<h1><i class="layui-icon" style="font-size: 150px; font-weight:100; color:#00b7ee;">&#x1005;</i></h1>-->
+    <!--</div>-->
+    <!--<div class="message">-->
+        <!--<h1 style="font-size:40px;color:#808080;">授权成功，点击<a href="javascript:;">跳转</a></h1>-->
+    <!--</div>-->
+    {/if}
+</div>
+
+<input type="hidden" id="codeUrl" value="{$code_url}">
+<input type="hidden" id="code" value="<?php if(isset($_GET['code']))echo $_GET['code'];?>">
+<!-- layui.js -->
+<script src="__index__/plug/layui/layui.js"></script>
+{if condition="isset($_GET['code'])"}
+<script src="__index__/js/login2.js"></script>
+{else /}
+<!-- 本页脚本 -->
+<script src="__index__/js/login.js"></script>
+{/if}
+</body>
+</html>

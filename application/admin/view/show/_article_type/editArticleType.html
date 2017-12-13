@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑文章分类</title>
+    <!-- layui.css  -->
+    <link href="__public__/plugin/layui/css/layui.css" rel="stylesheet" />
+      <link href="__public__/plugin/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+      <link href="__public__/css/animate.min.css" rel="stylesheet">
+    <link href="__public__/css/main.css" rel="stylesheet" />
+    <style>
+        .layui-input{width:100%}
+        .layui-form-item{width:100%}
+        .form-main{min-width:430px;max-width: 430px;margin:10px 0;}
+    </style>
+</head>
+<body>
+    <form class="layui-form form-main" action="">
+        <input type="hidden" name="id" value="{$id}">
+        <input type="hidden" class="url" value="{:url('admin/api.ArticleType/editArticleTypeApi')}">
+        <div class="layui-form-item">
+            <label class="layui-form-label">分类名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="article_type_name" required lay-verify="required" placeholder="请输入分类名称" value="{$articleType.article_type_name}" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formEditArticleType">立即修改</button>
+            </div>
+        </div>
+    </form>
+
+<script src="__public__/plugin/layui/layui.js"></script>
+<script src="__public__/js/articleTypeEdit.js"></script>
+</body>
+</html>

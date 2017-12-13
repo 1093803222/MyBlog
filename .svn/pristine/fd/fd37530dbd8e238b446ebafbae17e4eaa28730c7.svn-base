@@ -1,0 +1,188 @@
+<?php
+/**
+ * Created by 信磊.
+ * Date: 2017/8/6
+ * Time: 18:44
+ */
+
+namespace app\index\model;
+
+use think\Db;
+
+class Index extends BaseModel
+{
+    /**
+     * 获取文章列表
+     * @param int $pageSize |int 每次刷新获取的数量
+     * @param int $pageIndex |int 每次刷新索引
+     * @param string $type_id
+     * @param string $keywords 关键字
+     * @return html
+     */
+    public function getArticleList($pageSize = 10, $pageIndex = 1, $type_id = '%', $keywords = "")
+    {
+        $data = (new Article)->with('getArticleType,getUser')
+            ->where("`type_id` LIKE ? AND ((`title` LIKE ? OR `description` LIKE ?) AND (`delete` is null OR `delete` = ''))", [$type_id, '%'.$keywords.'%', '%'.$keywords.'%'])
+            ->limit($pageSize * ($pageIndex - 1), $pageSize)
+            ->field(['id','title','description','type_id','cover','top','recommend','edit_time','click','user_id'])
+            ->order('edit_time desc')
+            ->select();
+        $num = 0;
+        $str = '';
+        foreach ($data as $v) {
+            //为了前端能正常识别，将文章和用户的关联数组进行数组转维
+            $v['user_name'] = $v['get_user']['name'];
+            $v['article_type_name'] = $v['get_article_type']['article_type_name'];
+            //格式化时间戳
+            $v['edit_time'] = date('Y-m-d H:i', $v['edit_time']);
+            //文章 url
+            $url = 'detail/' . $v['id'] . '.html';
+            $str .= <<<LIST
+            <div class="article shadow">
+                <div class="article-left">
+                    <img src="{$v['cover']}" alt="{$v['cover']}" />
+                </div>
+                <div class="article-right">
+                    <div class="article-title">
+                        <a href="{$url}">{$v['title']}</a>
+                    </div>
+                    <div class="article-abstract">
+                    {$v['description']}
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="article-footer">
+                    <span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{$v['edit_time']}</span>
+                    <span class="article-author"><i class="fa fa-user"></i>&nbsp;&nbsp;{$v['user_name']}</span>
+                    <span><i class="fa fa-tag"></i>&nbsp;&nbsp;<a href="#">{$v['article_type_name']}</a></span>
+                    <span class="article-viewinfo"><i class="fa fa-eye"></i>&nbsp;{$v['click']}</span>
+                    <span class="article-viewinfo"><i class="fa fa-commenting"></i>&nbsp;4</span>
+                </div>
+            </div>
+LIST;
+            $num++;
+        }
+
+        return $str;
+    }
+
+    //侧边列表
+    public function sideData(){
+        $side['articleHot'] = Db::table('blog_article')
+            ->where("`delete` is null OR `delete` = ''")
+            ->order('click desc')
+            ->field('id,title')
+            ->limit(10)
+            ->select();
+        $side['resources'] = Db::table('blog_resource')
+            ->where("`delete` is null OR `delete` = ''")
+            ->order('edit_time desc')
+            ->field('title,link')
+            ->limit(10)
+            ->select();
+        $side['link'] = Db::table('blog_link')
+            ->order('id desc')
+            ->field('link_name,link_url')
+            ->limit(20)
+            ->select();
+
+        return $side;
+    }
+
+    //天气
+    public function weather(){
+        try{
+            //获取当前所在IP地址的城市
+            $city = $this->getIPByCity(request()->ip());
+            //api地址
+            $host = 'http://jisutqybmf.market.alicloudapi.com';
+            //api路径
+            $path = '/weather/query';
+            //请求方式
+            $method = 'GET';
+            //appcode
+            $appcode = "d75b1853172a40069cd10070358d44e9";
+            //头信息
+            $headers = array();
+            array_push($headers, "Authorization:APPCODE " . $appcode);
+            //请求参数
+            $querys = "city=" . $city;
+            $bodys = "";
+            //拼接url
+            $url = $host . $path . "?" . $querys;
+
+            //curl请求天气信息
+            $curl = curl_init();
+            //设置请求方式
+            curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $method);
+            //设置url
+            curl_setopt($curl, CURLOPT_URL, $url);
+            //设置自定义HTTP标头
+            curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+            //默认是否返回失败错误
+            curl_setopt($curl, CURLOPT_FAILONERROR, false);
+            //设置成功是否只返回结果，不自动输出
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            //设置是否返回请求头信息
+            curl_setopt($curl, CURLOPT_HEADER, false);
+            //判断是否https加密通道
+            if(1 == strpos("$" . $host, "https://")){
+               //跳过ssl证书验证
+                curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+                curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+            }
+            //对象形式返回天气数据
+            return json_decode(curl_exec($curl));
+
+        }catch(Exception $e){
+            echo $e->getMessage();
+        }
+    }
+
+    /**
+     * @ip 当前用户所在ip
+     * @return 数组对象
+     */
+    public function getIPByCity($ip){
+        if($ip == "127.0.0.1") {
+            return "南宁市";
+        }
+        $host = "https://dm-81.data.aliyun.com";
+        $path = "/rest/160601/ip/getIpInfo.json";
+        $method = "GET";
+        $appcode = "d75b1853172a40069cd10070358d44e9";
+        $headers = array();
+        array_push($headers, "Authorization:APPCODE " . $appcode);
+        $querys = "ip=" . $ip;
+        $bodys = "";
+        $url = $host . $path . "?" . $querys;
+
+        $curl = curl_init();
+        //设置请求方式
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $method);
+        //设置url
+        curl_setopt($curl, CURLOPT_URL, $url);
+        //设置自定义HTTP标头
+        curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+        //默认是否返回失败错误
+        curl_setopt($curl, CURLOPT_FAILONERROR, false);
+        //设置成功是否只返回结果，不自动输出
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        //设置是否返回请求头信息
+        curl_setopt($curl, CURLOPT_HEADER, false);
+        //判断是否https加密通道
+        if(1 == strpos("$" . $host, "https://")){
+            //跳过ssl证书验证
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+        }
+        $res = curl_exec($curl);
+        if (empty($res)) {
+            $res = '{"code":0,"data":{"area":"华南","area_id":"800000","city":"南宁市","city_id":"450100","country":"中国","country_id":"CN","county":"","county_id":"","ip":"222.216.222.157","isp":"电信","isp_id":"100017","region":"广西壮族自治区","region_id":"450000"}}';
+        }
+        $city_obj = json_decode($res);
+
+        return $city_obj->data->city;
+    }
+
+}

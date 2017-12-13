@@ -1,0 +1,63 @@
+<?php
+/**
+ * Created by 信磊.
+ * Date: 2017/9/1
+ * Time: 16:03
+ */
+
+namespace app\admin\model;
+
+
+use think\Db;
+
+class Index extends BaseModel
+{
+    //管理员首页网站信息
+    public function showInfo(){
+        $loginInfo = Db::select();
+        $showInfo['ip'] = request()->ip();              //本次登陆IP
+        $showInfo['city'] = $this->getIPByCity($showInfo['ip']);
+        $showInfo['time'] = date('Y-m-d H:i',time());
+    }
+
+    /**
+     * @ip 当前用户所在ip
+     * @return 数组对象
+     */
+    public function getIPByCity($ip){
+        if($ip == "127.0.0.1") {
+            return '广西壮族自治区南宁市';
+        }
+        $host = "https://dm-81.data.aliyun.com";
+        $path = "/rest/160601/ip/getIpInfo.json";
+        $method = "GET";
+        $appcode = "d75b1853172a40069cd10070358d44e9";
+        $headers = array();
+        array_push($headers, "Authorization:APPCODE " . $appcode);
+        $querys = "ip=" . $ip;
+        $bodys = "";
+        $url = $host . $path . "?" . $querys;
+
+        $curl = curl_init();
+        //设置请求方式
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $method);
+        //设置url
+        curl_setopt($curl, CURLOPT_URL, $url);
+        //设置自定义HTTP标头
+        curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+        //默认是否返回失败错误
+        curl_setopt($curl, CURLOPT_FAILONERROR, false);
+        //设置成功是否只返回结果，不自动输出
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        //设置是否返回请求头信息
+        curl_setopt($curl, CURLOPT_HEADER, false);
+        //判断是否https加密通道
+        if(1 == strpos("$" . $host, "https://")){
+            //跳过ssl证书验证
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+        }
+        $data = json_decode(curl_exec($curl));
+        return $data->data->region . $data->data->city;
+    }
+}

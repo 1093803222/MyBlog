@@ -1,0 +1,46 @@
+<?php
+/**
+ * Created by 信磊.
+ * Date: 2017/8/4
+ * Time: 15:59
+ */
+use think\Route;
+//第三方登陆
+Route::rule('login','index/show.BaseController/login');
+Route::rule('sinaLogin','index/show.BaseController/sinaLogin');
+Route::rule('loginOut','index/show.BaseController/loginOut');
+
+//前台首页
+Route::rule('index','index/show.Index/index');
+//首页文章数据
+Route::rule('indexArticleList','index/api.Index/getArticleListApi');
+
+//文章列表页
+Route::rule('article','index/show.Article/index');
+//文章详情页
+Route::rule('detail/:id','index/show.Article/detail');
+//文章分类数据
+Route::rule('getArticleType','index/api.Article/getArticleType');
+//文章评论
+Route::rule('articleCommentApi','index/api.Article/articleCommentApi');
+//文章评论加载更多
+Route::rule('getArticleCommentPageApi','index/api.Article/getArticleCommentPageApi');
+
+//资源页
+Route::rule('resource','index/show.Resource/index');
+//资源数据
+Route::rule('resourceApi','index/api.Resource/getResourceApi');
+
+//点点滴滴页
+Route::rule('timeline','index/show.Timeline/index');
+//时间轴
+Route::rule('getTimelineApi','index/api.Timeline/getTimelineApi');
+//发表时间轴
+Route::rule('setTimelineApi','index/api.Timeline/setTimelineApi');
+
+//关于页
+Route::rule('about','index/show.About/index');
+//留言
+Route::rule('remarkApi','index/api.Message/remarkApi');
+//留言分页
+Route::rule('getRemarkPageApi','index/api.Message/getRemarkPageApi');

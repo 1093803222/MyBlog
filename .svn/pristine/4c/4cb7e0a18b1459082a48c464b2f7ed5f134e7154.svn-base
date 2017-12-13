@@ -1,0 +1,3714 @@
+---------------------------------------------------------------
+[ 2017-08-19T23:15:28+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.238299s][吞吐率：4.20req/s] [内存消耗：1,603.72kb] [文件加载：46]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\show\Index->index[ F:\halloword\xinleiBlog\application\index\controller\show\Index.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/index\view\show\_index\index.html [ array (
+  0 => 'fileName',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-08-19T23:15:29+08:00 ] 127.0.0.1 127.0.0.1 GET /indexArticleList.html
+[ info ] lei.cn/indexArticleList.html [运行时间：0.423558s][吞吐率：2.36req/s] [内存消耗：2,542.01kb] [文件加载：57]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'api.Index',
+    2 => 'getArticleListApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\api\Index->getArticleListApi[ F:\halloword\xinleiBlog\application\index\controller\api\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002509s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.038392s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`description`,`type_id`,`cover`,`top`,`recommend`,`edit_time`,`click`,`user_id` FROM `blog_article` WHERE  (  `type_id` LIKE '%' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) ORDER BY edit_time desc LIMIT 0,10 [ RunTime:0.003008s ]
+[ sql ] [ SQL ] '%%%'%%%'%'HOW COLUMNS FROM `blog_article_type` [ RunTime:0.066943s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article_type` WHERE  `id` IN (3) [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_user` [ RunTime:0.032204s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `blog_user` WHERE  `id` IN (1) [ RunTime:0.000394s ]
+---------------------------------------------------------------
+[ 2017-08-19T23:17:26+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.335340s][吞吐率：2.98req/s] [内存消耗：1,760.69kb] [文件加载：48]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\show\Index->index[ F:\halloword\xinleiBlog\application\index\controller\show\Index.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/index\view\show\_index\index.html [ array (
+  0 => 'fileName',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-08-19T23:17:27+08:00 ] 127.0.0.1 127.0.0.1 GET /indexArticleList.html
+[ info ] lei.cn/indexArticleList.html [运行时间：0.392933s][吞吐率：2.54req/s] [内存消耗：2,542.01kb] [文件加载：57]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'api.Index',
+    2 => 'getArticleListApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\api\Index->getArticleListApi[ F:\halloword\xinleiBlog\application\index\controller\api\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012241s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.031422s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`description`,`type_id`,`cover`,`top`,`recommend`,`edit_time`,`click`,`user_id` FROM `blog_article` WHERE  (  `type_id` LIKE '%' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) ORDER BY edit_time desc LIMIT 0,10 [ RunTime:0.003056s ]
+[ sql ] [ SQL ] '%%%'%%%'%'HOW COLUMNS FROM `blog_article_type` [ RunTime:0.029758s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article_type` WHERE  `id` IN (3) [ RunTime:0.000761s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_user` [ RunTime:0.034047s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `blog_user` WHERE  `id` IN (1) [ RunTime:0.000541s ]
+---------------------------------------------------------------
+[ 2017-08-19T23:17:29+08:00 ] 127.0.0.1 127.0.0.1 GET /login.html
+[ info ] lei.cn/login.html [运行时间：0.240766s][吞吐率：4.15req/s] [内存消耗：1,878.23kb] [文件加载：45]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.BaseController',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\show\BaseController->login[ F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/index\view\public\login.html [ array (
+  0 => 'fileName',
+  1 => 'code_url',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-08-19T23:17:32+08:00 ] 127.0.0.1 127.0.0.1 GET /login.html
+[ info ] lei.cn/login.html [运行时间：0.246949s][吞吐率：4.05req/s] [内存消耗：1,878.23kb] [文件加载：45]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.BaseController',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\show\BaseController->login[ F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/index\view\public\login.html [ array (
+  0 => 'fileName',
+  1 => 'code_url',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-08-19T23:20:21+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.044361s][吞吐率：22.54req/s] [内存消耗：1,322.96kb] [文件加载：39]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-08-19T23:22:30+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.121610s][吞吐率：8.22req/s] [内存消耗：1,369.60kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:24:28+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.024460s][吞吐率：40.88req/s] [内存消耗：1,369.59kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:24:30+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.025194s][吞吐率：39.69req/s] [内存消耗：1,369.60kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:26:03+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.025538s][吞吐率：39.16req/s] [内存消耗：1,369.60kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:26:04+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.022442s][吞吐率：44.56req/s] [内存消耗：1,369.60kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:26:05+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.029959s][吞吐率：33.38req/s] [内存消耗：1,369.60kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:26:06+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.020779s][吞吐率：48.13req/s] [内存消耗：1,369.60kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:26:06+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.041611s][吞吐率：24.03req/s] [内存消耗：1,369.60kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:26:39+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.227141s][吞吐率：4.40req/s] [内存消耗：1,603.55kb] [文件加载：46]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\show\Index->index[ F:\halloword\xinleiBlog\application\index\controller\show\Index.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/index\view\show\_index\index.html [ array (
+  0 => 'fileName',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-08-19T23:26:40+08:00 ] 127.0.0.1 127.0.0.1 GET /indexArticleList.html
+[ info ] lei.cn/indexArticleList.html [运行时间：0.536763s][吞吐率：1.86req/s] [内存消耗：2,541.88kb] [文件加载：57]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'api.Index',
+    2 => 'getArticleListApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\api\Index->getArticleListApi[ F:\halloword\xinleiBlog\application\index\controller\api\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010552s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.147324s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`description`,`type_id`,`cover`,`top`,`recommend`,`edit_time`,`click`,`user_id` FROM `blog_article` WHERE  (  `type_id` LIKE '%' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) ORDER BY edit_time desc LIMIT 0,10 [ RunTime:0.006082s ]
+[ sql ] [ SQL ] '%%%'%%%'%'HOW COLUMNS FROM `blog_article_type` [ RunTime:0.048428s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article_type` WHERE  `id` IN (3) [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_user` [ RunTime:0.047818s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `blog_user` WHERE  `id` IN (1) [ RunTime:0.001460s ]
+---------------------------------------------------------------
+[ 2017-08-19T23:26:46+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.231546s][吞吐率：4.32req/s] [内存消耗：1,603.55kb] [文件加载：46]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\show\Index->index[ F:\halloword\xinleiBlog\application\index\controller\show\Index.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/index\view\show\_index\index.html [ array (
+  0 => 'fileName',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-08-19T23:26:46+08:00 ] 127.0.0.1 127.0.0.1 GET /indexArticleList.html
+[ info ] lei.cn/indexArticleList.html [运行时间：0.350952s][吞吐率：2.85req/s] [内存消耗：2,541.88kb] [文件加载：57]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'api.Index',
+    2 => 'getArticleListApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\api\Index->getArticleListApi[ F:\halloword\xinleiBlog\application\index\controller\api\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011473s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.030973s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`description`,`type_id`,`cover`,`top`,`recommend`,`edit_time`,`click`,`user_id` FROM `blog_article` WHERE  (  `type_id` LIKE '%' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) ORDER BY edit_time desc LIMIT 0,10 [ RunTime:0.002451s ]
+[ sql ] [ SQL ] '%%%'%%%'%'HOW COLUMNS FROM `blog_article_type` [ RunTime:0.023128s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article_type` WHERE  `id` IN (3) [ RunTime:0.000700s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_user` [ RunTime:0.026287s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `blog_user` WHERE  `id` IN (1) [ RunTime:0.000296s ]
+---------------------------------------------------------------
+[ 2017-08-19T23:27:33+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.032846s][吞吐率：30.45req/s] [内存消耗：1,369.11kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:27:34+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.030017s][吞吐率：33.31req/s] [内存消耗：1,369.11kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:27:35+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.023603s][吞吐率：42.37req/s] [内存消耗：1,369.11kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:27:36+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.023391s][吞吐率：42.75req/s] [内存消耗：1,369.11kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:27:36+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.021626s][吞吐率：46.24req/s] [内存消耗：1,369.11kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:27:36+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.047079s][吞吐率：21.24req/s] [内存消耗：1,369.11kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:27:37+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.023703s][吞吐率：42.19req/s] [内存消耗：1,369.11kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:27:37+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.038451s][吞吐率：26.01req/s] [内存消耗：1,369.11kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:27:38+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.020817s][吞吐率：48.04req/s] [内存消耗：1,369.11kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:27:38+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.025409s][吞吐率：39.36req/s] [内存消耗：1,369.11kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:27:38+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.023860s][吞吐率：41.91req/s] [内存消耗：1,369.11kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:27:39+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.026428s][吞吐率：37.84req/s] [内存消耗：1,369.08kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:27:39+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.025435s][吞吐率：39.32req/s] [内存消耗：1,369.11kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:29:12+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.023990s][吞吐率：41.68req/s] [内存消耗：1,369.11kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:29:13+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.023283s][吞吐率：42.95req/s] [内存消耗：1,369.11kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:29:15+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.042523s][吞吐率：23.52req/s] [内存消耗：1,369.11kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:29:17+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.042359s][吞吐率：23.61req/s] [内存消耗：1,369.11kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:30:27+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.026812s][吞吐率：37.30req/s] [内存消耗：1,369.06kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:30:28+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.029085s][吞吐率：34.38req/s] [内存消耗：1,369.06kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:30:29+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.033073s][吞吐率：30.24req/s] [内存消耗：1,369.06kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:30:59+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.022625s][吞吐率：44.20req/s] [内存消耗：1,368.66kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:31:00+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.021510s][吞吐率：46.49req/s] [内存消耗：1,368.66kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:31:01+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.025368s][吞吐率：39.42req/s] [内存消耗：1,368.66kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:31:01+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.026737s][吞吐率：37.40req/s] [内存消耗：1,368.66kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:31:01+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.022564s][吞吐率：44.32req/s] [内存消耗：1,368.66kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:31:53+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.035187s][吞吐率：28.42req/s] [内存消耗：1,369.06kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:31:54+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.022178s][吞吐率：45.09req/s] [内存消耗：1,369.06kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:31:54+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.023638s][吞吐率：42.30req/s] [内存消耗：1,369.06kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:31:54+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.021442s][吞吐率：46.64req/s] [内存消耗：1,369.06kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:31:56+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.021287s][吞吐率：46.98req/s] [内存消耗：1,369.06kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:32:57+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.024964s][吞吐率：40.06req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:32:58+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.020899s][吞吐率：47.85req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:32:59+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.023958s][吞吐率：41.74req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:00+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.020967s][吞吐率：47.69req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:00+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.036017s][吞吐率：27.76req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:01+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.023578s][吞吐率：42.41req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:01+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.022661s][吞吐率：44.13req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:02+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.023346s][吞吐率：42.83req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:02+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.021741s][吞吐率：46.00req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:03+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.021090s][吞吐率：47.42req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:04+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.021473s][吞吐率：46.57req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:04+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.022802s][吞吐率：43.86req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:05+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.029034s][吞吐率：34.44req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:05+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.021940s][吞吐率：45.58req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:06+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.043205s][吞吐率：23.15req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:07+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.032643s][吞吐率：30.63req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:08+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.021807s][吞吐率：45.86req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:09+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.026504s][吞吐率：37.73req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:12+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.023370s][吞吐率：42.79req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:14+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.022890s][吞吐率：43.69req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:33:16+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.025076s][吞吐率：39.88req/s] [内存消耗：1,369.09kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'lib\weibo\SaeTClientV2\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:35:38+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.025995s][吞吐率：38.47req/s] [内存消耗：1,369.03kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:35:39+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.039186s][吞吐率：25.52req/s] [内存消耗：1,369.04kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:35:40+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.021542s][吞吐率：46.42req/s] [内存消耗：1,369.04kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:35:40+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.021274s][吞吐率：47.01req/s] [内存消耗：1,369.04kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:35:41+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.023218s][吞吐率：43.07req/s] [内存消耗：1,369.04kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:35:41+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.023541s][吞吐率：42.48req/s] [内存消耗：1,369.04kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:35:42+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.027376s][吞吐率：36.53req/s] [内存消耗：1,369.04kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:35:43+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.022297s][吞吐率：44.85req/s] [内存消耗：1,369.04kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:35:43+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.027532s][吞吐率：36.32req/s] [内存消耗：1,369.04kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:37:06+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.225389s][吞吐率：4.44req/s] [内存消耗：1,603.55kb] [文件加载：46]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\show\Index->index[ F:\halloword\xinleiBlog\application\index\controller\show\Index.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/index\view\show\_index\index.html [ array (
+  0 => 'fileName',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-08-19T23:37:06+08:00 ] 127.0.0.1 127.0.0.1 GET /indexArticleList.html
+[ info ] lei.cn/indexArticleList.html [运行时间：0.385321s][吞吐率：2.60req/s] [内存消耗：2,541.88kb] [文件加载：57]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'api.Index',
+    2 => 'getArticleListApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\api\Index->getArticleListApi[ F:\halloword\xinleiBlog\application\index\controller\api\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004789s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.038323s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`description`,`type_id`,`cover`,`top`,`recommend`,`edit_time`,`click`,`user_id` FROM `blog_article` WHERE  (  `type_id` LIKE '%' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) ORDER BY edit_time desc LIMIT 0,10 [ RunTime:0.001716s ]
+[ sql ] [ SQL ] '%%%'%%%'%'HOW COLUMNS FROM `blog_article_type` [ RunTime:0.027227s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article_type` WHERE  `id` IN (3) [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_user` [ RunTime:0.026054s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `blog_user` WHERE  `id` IN (1) [ RunTime:0.000375s ]
+---------------------------------------------------------------
+[ 2017-08-19T23:37:08+08:00 ] 127.0.0.1 127.0.0.1 GET /login.html
+[ info ] lei.cn/login.html [运行时间：0.033440s][吞吐率：29.90req/s] [内存消耗：1,387.67kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.BaseController',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\show\BaseController->login[ F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:32]
+---------------------------------------------------------------
+[ 2017-08-19T23:37:29+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.237183s][吞吐率：4.22req/s] [内存消耗：1,603.55kb] [文件加载：46]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\show\Index->index[ F:\halloword\xinleiBlog\application\index\controller\show\Index.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/index\view\show\_index\index.html [ array (
+  0 => 'fileName',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-08-19T23:37:29+08:00 ] 127.0.0.1 127.0.0.1 GET /indexArticleList.html
+[ info ] lei.cn/indexArticleList.html [运行时间：0.359115s][吞吐率：2.78req/s] [内存消耗：2,541.88kb] [文件加载：57]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'api.Index',
+    2 => 'getArticleListApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\api\Index->getArticleListApi[ F:\halloword\xinleiBlog\application\index\controller\api\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012089s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.032825s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`description`,`type_id`,`cover`,`top`,`recommend`,`edit_time`,`click`,`user_id` FROM `blog_article` WHERE  (  `type_id` LIKE '%' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) ORDER BY edit_time desc LIMIT 0,10 [ RunTime:0.001263s ]
+[ sql ] [ SQL ] '%%%'%%%'%'HOW COLUMNS FROM `blog_article_type` [ RunTime:0.030916s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article_type` WHERE  `id` IN (3) [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_user` [ RunTime:0.030713s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `blog_user` WHERE  `id` IN (1) [ RunTime:0.000313s ]
+---------------------------------------------------------------
+[ 2017-08-19T23:37:31+08:00 ] 127.0.0.1 127.0.0.1 GET /login.html
+[ info ] lei.cn/login.html [运行时间：0.030348s][吞吐率：32.95req/s] [内存消耗：1,387.67kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.BaseController',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\show\BaseController->login[ F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:32]
+---------------------------------------------------------------
+[ 2017-08-19T23:38:11+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.243588s][吞吐率：4.11req/s] [内存消耗：1,603.58kb] [文件加载：46]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\show\Index->index[ F:\halloword\xinleiBlog\application\index\controller\show\Index.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/index\view\show\_index\index.html [ array (
+  0 => 'fileName',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-08-19T23:38:12+08:00 ] 127.0.0.1 127.0.0.1 GET /indexArticleList.html
+[ info ] lei.cn/indexArticleList.html [运行时间：0.351348s][吞吐率：2.85req/s] [内存消耗：2,541.86kb] [文件加载：57]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'api.Index',
+    2 => 'getArticleListApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\api\Index->getArticleListApi[ F:\halloword\xinleiBlog\application\index\controller\api\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001403s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.028444s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`description`,`type_id`,`cover`,`top`,`recommend`,`edit_time`,`click`,`user_id` FROM `blog_article` WHERE  (  `type_id` LIKE '%' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) ORDER BY edit_time desc LIMIT 0,10 [ RunTime:0.003758s ]
+[ sql ] [ SQL ] '%%%'%%%'%'HOW COLUMNS FROM `blog_article_type` [ RunTime:0.028918s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article_type` WHERE  `id` IN (3) [ RunTime:0.001729s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_user` [ RunTime:0.032025s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `blog_user` WHERE  `id` IN (1) [ RunTime:0.000425s ]
+---------------------------------------------------------------
+[ 2017-08-19T23:38:13+08:00 ] 127.0.0.1 127.0.0.1 GET /login.html
+[ info ] lei.cn/login.html [运行时间：0.030967s][吞吐率：32.29req/s] [内存消耗：1,387.68kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.BaseController',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\show\BaseController->login[ F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:33]
+---------------------------------------------------------------
+[ 2017-08-19T23:39:26+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.431772s][吞吐率：2.32req/s] [内存消耗：1,305.28kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]include(/extend/weibo/saetv2.ex.class.php): failed to open stream: No such file or directory[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:15]
+---------------------------------------------------------------
+[ 2017-08-19T23:39:57+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.433140s][吞吐率：2.31req/s] [内存消耗：1,305.52kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]include(F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php/extend/weibo/saetv2.ex.class.php): failed to open stream: No such file or directory[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:15]
+---------------------------------------------------------------
+[ 2017-08-19T23:40:28+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.438401s][吞吐率：2.28req/s] [内存消耗：1,305.30kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]include(../../extend/weibo/saetv2.ex.class.php): failed to open stream: No such file or directory[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:15]
+---------------------------------------------------------------
+[ 2017-08-19T23:40:34+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.448611s][吞吐率：2.23req/s] [内存消耗：1,305.30kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]include(../../../extend/weibo/saetv2.ex.class.php): failed to open stream: No such file or directory[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:15]
+---------------------------------------------------------------
+[ 2017-08-19T23:40:57+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.435822s][吞吐率：2.29req/s] [内存消耗：1,305.31kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]include(../../../../extend/weibo/saetv2.ex.class.php): failed to open stream: No such file or directory[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:15]
+---------------------------------------------------------------
+[ 2017-08-19T23:41:02+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.425510s][吞吐率：2.35req/s] [内存消耗：1,305.29kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]include(../../../../../extend/weibo/saetv2.ex.class.php): failed to open stream: No such file or directory[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:15]
+---------------------------------------------------------------
+[ 2017-08-19T23:41:12+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.452619s][吞吐率：2.21req/s] [内存消耗：1,305.30kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]include(../../../../../../extend/weibo/saetv2.ex.class.php): failed to open stream: No such file or directory[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:15]
+---------------------------------------------------------------
+[ 2017-08-19T23:41:24+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.429034s][吞吐率：2.33req/s] [内存消耗：1,305.31kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]include(../../../../extend/weibo/saetv2.ex.class.php): failed to open stream: No such file or directory[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:15]
+---------------------------------------------------------------
+[ 2017-08-19T23:41:28+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.435990s][吞吐率：2.29req/s] [内存消耗：1,305.30kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]include(../../../extend/weibo/saetv2.ex.class.php): failed to open stream: No such file or directory[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:15]
+---------------------------------------------------------------
+[ 2017-08-19T23:41:32+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.428338s][吞吐率：2.33req/s] [内存消耗：1,305.30kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]include(../../extend/weibo/saetv2.ex.class.php): failed to open stream: No such file or directory[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:15]
+---------------------------------------------------------------
+[ 2017-08-19T23:41:36+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.247580s][吞吐率：4.04req/s] [内存消耗：1,942.70kb] [文件加载：47]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\show\Index->index[ F:\halloword\xinleiBlog\application\index\controller\show\Index.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/index\view\show\_index\index.html [ array (
+  0 => 'fileName',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-08-19T23:41:37+08:00 ] 127.0.0.1 127.0.0.1 GET /indexArticleList.html
+[ info ] lei.cn/indexArticleList.html [运行时间：0.360612s][吞吐率：2.77req/s] [内存消耗：2,881.01kb] [文件加载：58]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'api.Index',
+    2 => 'getArticleListApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\api\Index->getArticleListApi[ F:\halloword\xinleiBlog\application\index\controller\api\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002589s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.037212s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`description`,`type_id`,`cover`,`top`,`recommend`,`edit_time`,`click`,`user_id` FROM `blog_article` WHERE  (  `type_id` LIKE '%' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) ORDER BY edit_time desc LIMIT 0,10 [ RunTime:0.001337s ]
+[ sql ] [ SQL ] '%%%'%%%'%'HOW COLUMNS FROM `blog_article_type` [ RunTime:0.030034s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article_type` WHERE  `id` IN (3) [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_user` [ RunTime:0.024076s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `blog_user` WHERE  `id` IN (1) [ RunTime:0.000329s ]
+---------------------------------------------------------------
+[ 2017-08-19T23:41:40+08:00 ] 127.0.0.1 127.0.0.1 GET /login.html
+[ info ] lei.cn/login.html [运行时间：0.034994s][吞吐率：28.58req/s] [内存消耗：1,726.89kb] [文件加载：44]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.BaseController',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\show\BaseController->login[ F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\index\controller\show\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:33]
+---------------------------------------------------------------
+[ 2017-08-19T23:42:02+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.234686s][吞吐率：4.26req/s] [内存消耗：1,925.27kb] [文件加载：47]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\show\Index->index[ F:\halloword\xinleiBlog\application\index\controller\show\Index.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/index\view\show\_index\index.html [ array (
+  0 => 'fileName',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-08-19T23:42:03+08:00 ] 127.0.0.1 127.0.0.1 GET /indexArticleList.html
+[ info ] lei.cn/indexArticleList.html [运行时间：0.366073s][吞吐率：2.73req/s] [内存消耗：2,863.55kb] [文件加载：58]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'api.Index',
+    2 => 'getArticleListApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\api\Index->getArticleListApi[ F:\halloword\xinleiBlog\application\index\controller\api\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001143s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.034741s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`description`,`type_id`,`cover`,`top`,`recommend`,`edit_time`,`click`,`user_id` FROM `blog_article` WHERE  (  `type_id` LIKE '%' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) ORDER BY edit_time desc LIMIT 0,10 [ RunTime:0.001749s ]
+[ sql ] [ SQL ] '%%%'%%%'%'HOW COLUMNS FROM `blog_article_type` [ RunTime:0.036725s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article_type` WHERE  `id` IN (3) [ RunTime:0.001311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_user` [ RunTime:0.031610s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `blog_user` WHERE  `id` IN (1) [ RunTime:0.000373s ]
+---------------------------------------------------------------
+[ 2017-08-19T23:42:05+08:00 ] 127.0.0.1 127.0.0.1 GET /login.html
+[ info ] lei.cn/login.html [运行时间：0.050308s][吞吐率：19.88req/s] [内存消耗：1,709.45kb] [文件加载：44]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.BaseController',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\show\BaseController->login[ F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\index\controller\show\SaeTOAuthV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:33]
+---------------------------------------------------------------
+[ 2017-08-19T23:42:44+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.032945s][吞吐率：30.35req/s] [内存消耗：1,690.82kb] [文件加载：44]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\index\controller\show\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:22]
+---------------------------------------------------------------
+[ 2017-08-19T23:44:06+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.427238s][吞吐率：2.34req/s] [内存消耗：1,306.40kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]include(../../../.././extend/weibo/saetv2.ex.class.php): failed to open stream: No such file or directory[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:15]
+---------------------------------------------------------------
+[ 2017-08-19T23:47:48+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.030344s][吞吐率：32.96req/s] [内存消耗：1,369.04kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:47:49+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.028971s][吞吐率：34.52req/s] [内存消耗：1,369.04kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:47:50+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.026638s][吞吐率：37.54req/s] [内存消耗：1,369.04kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:47:50+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.023440s][吞吐率：42.66req/s] [内存消耗：1,369.04kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:47:50+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.027901s][吞吐率：35.84req/s] [内存消耗：1,369.04kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:47:51+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.029041s][吞吐率：34.43req/s] [内存消耗：1,369.04kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:47:52+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.024530s][吞吐率：40.77req/s] [内存消耗：1,369.04kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'weibo\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:51:08+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.026597s][吞吐率：37.60req/s] [内存消耗：1,369.13kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\index\controller\show\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:19]
+---------------------------------------------------------------
+[ 2017-08-19T23:52:41+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.430265s][吞吐率：2.32req/s] [内存消耗：1,358.43kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组下标: 1[F:\halloword\xinleiBlog\thinkphp\library\think\Loader.php:316]
+---------------------------------------------------------------
+[ 2017-08-19T23:54:16+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.021149s][吞吐率：47.28req/s] [内存消耗：1,369.64kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\index\controller\show\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:54:47+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.023837s][吞吐率：41.95req/s] [内存消耗：1,369.65kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\index\controller\show\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:55:13+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.025353s][吞吐率：39.44req/s] [内存消耗：1,691.42kb] [文件加载：44]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\index\controller\show\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:55:14+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.024301s][吞吐率：41.15req/s] [内存消耗：1,691.42kb] [文件加载：44]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\index\controller\show\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:55:15+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.028482s][吞吐率：35.11req/s] [内存消耗：1,691.42kb] [文件加载：44]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\index\controller\show\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:56:17+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.046676s][吞吐率：21.42req/s] [内存消耗：1,690.95kb] [文件加载：44]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\index\controller\show\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:56:18+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.055059s][吞吐率：18.16req/s] [内存消耗：1,690.95kb] [文件加载：44]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\index\controller\show\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:56:19+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.026644s][吞吐率：37.53req/s] [内存消耗：1,690.95kb] [文件加载：44]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\index\controller\show\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]
+---------------------------------------------------------------
+[ 2017-08-19T23:56:47+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：0.023508s][吞吐率：42.54req/s] [内存消耗：1,690.95kb] [文件加载：44]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=resivem8e8g399usvkrugnv6f5; weibo_706062327=access_token%3D2.00_B5K_D0DEZml8cf6985d25f8LuLE%26remind_in%3D157679999%26expires_in%3D157679999%26uid%3D3031624497',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\index\controller\show\SaeTClientV2' not found[F:\halloword\xinleiBlog\application\index\controller\show\BaseController.php:21]

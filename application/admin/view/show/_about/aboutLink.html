@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>数据列表页面</title>
+    <!-- layui.css -->
+    <link href="__public__/plugin/layui/css/layui.css" rel="stylesheet"/>
+    <style>
+        tr td:not(:nth-child(0)),
+        tr th:not(:nth-child(0)) {
+            text-align: center;
+        }
+
+        .dataConsole {
+            text-align: center;
+            margin-bottom:50px;
+        }
+
+        .layui-inline {
+            margin: 2%;
+            width: 70%;
+        }
+        #tag{
+            float: left;
+            width:350px;
+            height:200px;
+        }
+
+        .friendlink {
+            padding: 0 15px;
+        }
+
+        .friendlink li {
+            width: 30%;
+            margin: 0 1%;
+            margin-top: 10px;
+            float: left;
+        }
+
+        .friendlink-item {
+            box-shadow: inset 0 0 2px #5FB878;
+            width: 100%;
+            display: block;
+            padding: 10px 0;
+            text-align: left;
+            min-height: 45px;
+            position: relative;
+        }
+
+        .friendlink-item:hover {
+            box-shadow: 0 0 2px #5FB878;
+        }
+
+
+        .friendlink-item-pic {
+            display: inline-block;
+            position: absolute;
+            left: 10%;
+            margin: 0 10px;
+        }
+
+        .friendlink-item-pic img {
+            width: 45px;
+            height: 45px;
+            position: relative;
+            left: 0px;
+            border-radius: 50px;
+        }
+
+        .friendlink-item-title {
+            font-size: 17px;
+            margin-left: 65px;
+            text-align: center;
+            line-height: 20px;
+        }
+
+        .friendlink-item-domain {
+            font-size: 13px;
+            margin-left: 65px;
+            text-align: center;
+            line-height: 20px;
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<fieldset id="dataConsole" class="layui-elem-field layui-field-title dataConsole">
+    <legend>管理 - 友情链接</legend>
+    <div class="layui-field-box">
+        <div id="articleIndexTop">
+            <div class="layui-form-item" style="margin:0;margin-top:15px;">
+                <form class="layui-form layui-form-pane update-link-about">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">介绍</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="introduce" required lay-verify="required" placeholder="介绍"
+                                   autocomplete="off" value="{$linkData.introduce}" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-inline">
+                        <label class="layui-form-label">提示标签</label>
+                        <div class="layui-input-block">
+                            <textarea id="tag" name="tag">{$linkData.tag}</textarea>
+                        </div>
+                    </div>
+
+                    <div class="layui-inline">
+                        <label class="layui-form-label">友情信息</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="friendmsg" required lay-verify="required" placeholder="友情信息"
+                                   autocomplete="off" value="{$linkData.friendmsg}" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-inline">
+                        <div class="layui-input-block" style="margin-left:0;margin-right: 10%;">
+                            <button class="layui-btn layui-btn-big layui-btn-radius layui-btn-normal"
+                                    style="width:250px; " lay-submit lay-filter="editAboutLink">立即修改
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</fieldset>
+<fieldset class="layui-elem-field layui-field-title dataConsole" >
+    <legend>友情链接列表</legend>
+    <div class="layui-field-box">
+        <div >
+            <div class="layui-form-item" style="margin:0;margin-top:15px;">
+                <div class="layui-field-box">
+                    <ul class="friendlink">
+                        {foreach $link as $link}
+                        <li>
+                            <a target="_blank" href="{$link['link_url']}" title="{$link['link_name']}" class="friendlink-item">
+                                <p class="friendlink-item-pic"><img src="{$link['link_img']}" alt="{$link['link_name']}" /></p>
+                                <p class="friendlink-item-title">{$link['link_name']}</p>
+                                <p class="friendlink-item-domain">{$link['link_url']}</p>
+                            </a>
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</fieldset>
+<fieldset class="layui-elem-field layui-field-title dataConsole" >
+    <div class="layui-field-box">
+        <div>
+            <div class="layui-form-item" style="margin:0;margin-top:15px;">
+                <form id="add-link-form" class="layui-form layui-form-pane " enctype="multipart/form-data">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">链接名称</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="link_name" required lay-verify="required" placeholder="链接名称"
+                                   autocomplete="off" value="" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">链接地址</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="link_url" required lay-verify="required" placeholder="链接地址"
+                                   autocomplete="off" value="" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">链接图片</label>
+                        <div class="layui-input-block">
+                            <input type="file" name="link_img" required lay-verify="required" placeholder="链接图片" value=""  class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-inline">
+                        <div class="layui-input-block" style="margin-left:0;margin-right: 10%;">
+                            <input type="button" value="立即添加" style="width:250px;"  class="layui-btn layui-btn-big layui-btn-radius layui-btn-normal add-submit">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</fieldset>
+<script src="__public__/js/jquery2.1.4.js" type="text/javascript" charset="utf-8"></script>
+<!-- layui.js -->
+<script src="__public__/plugin/layui/layui.js"></script>
+<!-- layui规范化用法 -->
+<script type="text/javascript">
+
+    layui.config({
+        base: '__public__/js/'
+    }).use('aboutLink');
+
+</script>
+</body>
+</html>

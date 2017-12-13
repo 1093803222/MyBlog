@@ -1,0 +1,23 @@
+<?php
+/**
+ * Created by 信磊.
+ * Date: 2017/8/4
+ * Time: 15:53
+ */
+
+namespace app\index\controller\show;
+
+
+use think\Db;
+
+class Index extends BaseController
+{
+    public function index()
+    {
+        $articleHold = Db::table('blog_article')
+            ->where("`delete` is null OR `delete` = ''")
+            ->order('click desc')
+            ->select();
+        return view(['articleHold' => $articleHold]);
+    }
+}

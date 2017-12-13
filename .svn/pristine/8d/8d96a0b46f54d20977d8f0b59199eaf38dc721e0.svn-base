@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="187103ff-147e-41b6-8a7e-2b3c3f951b50" name="xinleiblog (project level)" url="ftp://120.77.219.2">
+        <fileTransfer host="ftp://120.77.219.2" port="">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

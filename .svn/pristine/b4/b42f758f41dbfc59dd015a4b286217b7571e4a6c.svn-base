@@ -1,0 +1,2600 @@
+---------------------------------------------------------------
+[ 2017-09-12T13:16:09+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-index.html
+[ info ] lei.cn/admin-index.html [运行时间：1.131586s][吞吐率：0.88req/s] [内存消耗：1,236.22kb] [文件加载：42]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:16:10+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-login.html
+[ info ] lei.cn/admin-login.html [运行时间：0.282748s][吞吐率：3.54req/s] [内存消耗：1,364.25kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\show\Login->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Login.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:16:10+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.175923s][吞吐率：5.68req/s] [内存消耗：1,172.51kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:16:20+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-login.html
+[ info ] lei.cn/admin-login.html [运行时间：0.031541s][吞吐率：31.70req/s] [内存消耗：1,364.63kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\show\Login->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Login.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:16:20+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.105399s][吞吐率：9.49req/s] [内存消耗：1,172.07kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:16:20+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-login.html
+[ info ] lei.cn/admin-login.html [运行时间：0.047192s][吞吐率：21.19req/s] [内存消耗：1,364.63kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\show\Login->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Login.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:16:20+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.077922s][吞吐率：12.83req/s] [内存消耗：1,172.04kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:16:22+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-login.html
+[ info ] lei.cn/admin-login.html [运行时间：0.050605s][吞吐率：19.76req/s] [内存消耗：1,364.63kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\show\Login->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Login.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:16:22+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.041150s][吞吐率：24.30req/s] [内存消耗：1,172.03kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:16:38+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.018025s][吞吐率：55.48req/s] [内存消耗：1,172.34kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/touristappid/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.01.170907 MicroMessenger/6.5.7 Language/zh_CN webview/99port/9974',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:16:51+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.061783s][吞吐率：16.19req/s] [内存消耗：1,172.67kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/touristappid/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.01.170907 MicroMessenger/6.5.7 Language/zh_CN webview/100port/9974',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:16:53+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.024174s][吞吐率：41.37req/s] [内存消耗：1,172.68kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/touristappid/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.01.170907 MicroMessenger/6.5.7 Language/zh_CN webview/101port/9974',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:16:56+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.059428s][吞吐率：16.83req/s] [内存消耗：1,172.03kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:17:27+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-index.html
+[ info ] lei.cn/admin-index.html [运行时间：0.013615s][吞吐率：73.45req/s] [内存消耗：1,236.55kb] [文件加载：42]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:17:27+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-login.html
+[ info ] lei.cn/admin-login.html [运行时间：0.014166s][吞吐率：70.59req/s] [内存消耗：1,364.30kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\show\Login->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Login.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:17:27+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.018960s][吞吐率：52.74req/s] [内存消耗：1,172.06kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:17:30+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-login.html
+[ info ] lei.cn/admin-login.html [运行时间：0.041669s][吞吐率：24.00req/s] [内存消耗：1,364.63kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\show\Login->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Login.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:17:30+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.030668s][吞吐率：32.61req/s] [内存消耗：1,172.06kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:17:47+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-login.html
+[ info ] lei.cn/admin-login.html [运行时间：0.027515s][吞吐率：36.34req/s] [内存消耗：1,364.34kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/touristappid/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.01.170907 MicroMessenger/6.5.7 Language/zh_CN webview/102port/9974',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\show\Login->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Login.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:17:54+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.014676s][吞吐率：68.14req/s] [内存消耗：1,172.69kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/touristappid/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.01.170907 MicroMessenger/6.5.7 Language/zh_CN webview/103port/9974',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:18:01+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.014690s][吞吐率：68.07req/s] [内存消耗：1,172.69kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/touristappid/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.01.170907 MicroMessenger/6.5.7 Language/zh_CN webview/104port/9974',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:23:35+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.015670s][吞吐率：63.82req/s] [内存消耗：1,172.68kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/touristappid/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.01.170907 MicroMessenger/6.5.7 Language/zh_CN webview/105port/9974',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:23:43+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.015888s][吞吐率：62.94req/s] [内存消耗：1,172.70kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/touristappid/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.01.170907 MicroMessenger/6.5.7 Language/zh_CN webview/106port/9974',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:27:16+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.016459s][吞吐率：60.76req/s] [内存消耗：1,172.69kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/touristappid/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.01.170907 MicroMessenger/6.5.7 Language/zh_CN webview/107port/9974',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:27:32+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.016620s][吞吐率：60.17req/s] [内存消耗：1,172.69kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/touristappid/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.01.170907 MicroMessenger/6.5.7 Language/zh_CN webview/108port/9974',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T13:27:36+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.014960s][吞吐率：66.85req/s] [内存消耗：1,172.69kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/touristappid/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.01.170907 MicroMessenger/6.5.7 Language/zh_CN webview/109port/9974',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:15+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-index.html
+[ info ] lei.cn/admin-index.html [运行时间：0.017414s][吞吐率：57.43req/s] [内存消耗：1,236.52kb] [文件加载：42]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:15+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-login.html
+[ info ] lei.cn/admin-login.html [运行时间：0.015973s][吞吐率：62.61req/s] [内存消耗：1,364.30kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\show\Login->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Login.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:15+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.018436s][吞吐率：54.24req/s] [内存消耗：1,172.06kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:17+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.021236s][吞吐率：47.09req/s] [内存消耗：1,172.06kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:22+08:00 ] 127.0.0.1 127.0.0.1 POST /admin-loginApi.html
+[ info ] lei.cn/admin-loginApi.html [运行时间：0.256270s][吞吐率：3.90req/s] [内存消耗：2,324.80kb] [文件加载：57]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Login',
+    2 => 'loginApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '40',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'admin',
+  'password' => 'admin',
+  'verify' => 'wmfe',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\api\Login->loginApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016741s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_user` [ RunTime:0.071969s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` WHERE  `account` = 'admin' LIMIT 1 [ RunTime:0.004026s ]
+---------------------------------------------------------------
+[ 2017-09-12T18:27:24+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-index.html
+[ info ] lei.cn/admin-index.html [运行时间：0.332667s][吞吐率：3.01req/s] [内存消耗：2,255.16kb] [文件加载：55]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\show\Index->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Index.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_index\index.html [ array (
+  0 => 'showInfo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001166s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_user` [ RunTime:0.029665s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001301s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_user` LIMIT 1 [ RunTime:0.002215s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_user` WHERE  `login_time` BETWEEN '1505145600' AND '1505232000' LIMIT 1 [ RunTime:0.000665s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.053370s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `delete` IS NULL OR `delete` = '' LIMIT 1 [ RunTime:0.003590s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_resource` [ RunTime:0.043000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_resource` WHERE  `delete` IS NULL OR `delete` = '' LIMIT 1 [ RunTime:0.001126s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_message` [ RunTime:0.055959s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_message` WHERE  `pid` = 0 LIMIT 1 [ RunTime:0.000315s ]
+---------------------------------------------------------------
+[ 2017-09-12T18:27:26+08:00 ] 127.0.0.1 127.0.0.1 GET /SQLbackups.html
+[ info ] lei.cn/SQLbackups.html [运行时间：0.048169s][吞吐率：20.76req/s] [内存消耗：1,361.80kb] [文件加载：45]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Sqlbackups',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\show\Sqlbackups->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Sqlbackups.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_sqlbackups\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:26+08:00 ] 127.0.0.1 127.0.0.1 POST /SQLbackupsApi
+[ info ] lei.cn/SQLbackupsApi [运行时间：0.054194s][吞吐率：18.45req/s] [内存消耗：1,217.47kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Sqlbackups',
+    2 => 'sqlbackupsApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/SQLbackups.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\api\Sqlbackups->sqlbackupsApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Sqlbackups.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:31+08:00 ] 127.0.0.1 127.0.0.1 POST /SQLbackupsApi
+[ info ] lei.cn/SQLbackupsApi [运行时间：0.439468s][吞吐率：2.28req/s] [内存消耗：1,218.30kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Sqlbackups',
+    2 => 'sqlbackupsApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/SQLbackups.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'tp' => 'backup',
+  'name' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\api\Sqlbackups->sqlbackupsApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Sqlbackups.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:32+08:00 ] 127.0.0.1 127.0.0.1 GET /SQLbackups.html
+[ info ] lei.cn/SQLbackups.html [运行时间：0.025058s][吞吐率：39.91req/s] [内存消耗：1,362.00kb] [文件加载：45]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Sqlbackups',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/SQLbackups.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\show\Sqlbackups->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Sqlbackups.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_sqlbackups\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:32+08:00 ] 127.0.0.1 127.0.0.1 POST /SQLbackupsApi
+[ info ] lei.cn/SQLbackupsApi [运行时间：0.020370s][吞吐率：49.09req/s] [内存消耗：1,217.48kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Sqlbackups',
+    2 => 'sqlbackupsApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/SQLbackups.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\api\Sqlbackups->sqlbackupsApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Sqlbackups.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:34+08:00 ] 127.0.0.1 127.0.0.1 POST /SQLbackupsApi
+[ info ] lei.cn/SQLbackupsApi [运行时间：0.025516s][吞吐率：39.19req/s] [内存消耗：1,217.48kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Sqlbackups',
+    2 => 'sqlbackupsApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/SQLbackups.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\api\Sqlbackups->sqlbackupsApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Sqlbackups.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:35+08:00 ] 127.0.0.1 127.0.0.1 POST /SQLbackupsApi
+[ info ] lei.cn/SQLbackupsApi [运行时间：0.027619s][吞吐率：36.21req/s] [内存消耗：1,217.48kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Sqlbackups',
+    2 => 'sqlbackupsApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/SQLbackups.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\api\Sqlbackups->sqlbackupsApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Sqlbackups.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:37+08:00 ] 127.0.0.1 127.0.0.1 POST /SQLbackupsApi
+[ info ] lei.cn/SQLbackupsApi [运行时间：0.025831s][吞吐率：38.71req/s] [内存消耗：1,218.15kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Sqlbackups',
+    2 => 'sqlbackupsApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/SQLbackups.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '30',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'tp' => 'del',
+  'name' => '20170909161715.sql',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\api\Sqlbackups->sqlbackupsApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Sqlbackups.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:38+08:00 ] 127.0.0.1 127.0.0.1 GET /SQLbackups.html
+[ info ] lei.cn/SQLbackups.html [运行时间：0.046237s][吞吐率：21.63req/s] [内存消耗：1,362.00kb] [文件加载：45]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Sqlbackups',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/SQLbackups.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\show\Sqlbackups->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Sqlbackups.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_sqlbackups\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:38+08:00 ] 127.0.0.1 127.0.0.1 POST /SQLbackupsApi
+[ info ] lei.cn/SQLbackupsApi [运行时间：0.022480s][吞吐率：44.48req/s] [内存消耗：1,217.47kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Sqlbackups',
+    2 => 'sqlbackupsApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/SQLbackups.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\api\Sqlbackups->sqlbackupsApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Sqlbackups.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:41+08:00 ] 127.0.0.1 127.0.0.1 POST /SQLbackupsApi
+[ info ] lei.cn/SQLbackupsApi [运行时间：0.278219s][吞吐率：3.59req/s] [内存消耗：1,211.08kb] [文件加载：40]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Sqlbackups',
+    2 => 'sqlbackupsApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/SQLbackups.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '34',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'tp' => 'restore',
+  'name' => '20170909161723.sql',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\api\Sqlbackups->sqlbackupsApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Sqlbackups.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:42+08:00 ] 127.0.0.1 127.0.0.1 GET /SQLbackups.html
+[ info ] lei.cn/SQLbackups.html [运行时间：0.038972s][吞吐率：25.66req/s] [内存消耗：1,362.00kb] [文件加载：45]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Sqlbackups',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/SQLbackups.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\show\Sqlbackups->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Sqlbackups.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_sqlbackups\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:42+08:00 ] 127.0.0.1 127.0.0.1 POST /SQLbackupsApi
+[ info ] lei.cn/SQLbackupsApi [运行时间：0.020757s][吞吐率：48.18req/s] [内存消耗：1,217.47kb] [文件加载：41]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Sqlbackups',
+    2 => 'sqlbackupsApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/SQLbackups.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\api\Sqlbackups->sqlbackupsApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Sqlbackups.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:27:47+08:00 ] 127.0.0.1 127.0.0.1 GET /SQLbackupsApi?tp=dowonload&name=20170909161725.sql
+[ info ] lei.cn/SQLbackupsApi?tp=dowonload&name=20170909161725.sql [运行时间：0.060447s][吞吐率：16.54req/s] [内存消耗：1,195.10kb] [文件加载：40]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Sqlbackups',
+    2 => 'sqlbackupsApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/SQLbackups.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'tp' => 'dowonload',
+  'name' => '20170909161725.sql',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\api\Sqlbackups->sqlbackupsApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Sqlbackups.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:30:02+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ info ] lei.cn/index.html [运行时间：1.335064s][吞吐率：0.75req/s] [内存消耗：2,727.14kb] [文件加载：64]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\show\Index->index[ F:\halloword\xinleiBlog\application\index\controller\show\Index.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/index\view\show\_index\index.html [ array (
+  0 => 'fileName',
+  1 => 'title',
+  2 => 'myData',
+  3 => 'sideData',
+  4 => 'weather',
+  5 => 'count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000949s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_author_about` [ RunTime:0.019584s ]
+[ sql ] [ SQL ] SELECT `top_img`,`name`,`introduce`,`address`,`qq_link`,`email_link`,`sina_link`,`git_link` FROM `blog_author_about` LIMIT 1 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.016575s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `blog_article` WHERE  (  `delete` is null OR `delete` = '' ) ORDER BY click desc LIMIT 10 [ RunTime:0.001472s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_resource` [ RunTime:0.020474s ]
+[ sql ] [ SQL ] SELECT `title`,`link` FROM `blog_resource` WHERE  (  `delete` is null OR `delete` = '' ) ORDER BY edit_time desc LIMIT 10 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.018400s ]
+[ sql ] [ SQL ] SELECT `link_name`,`link_url` FROM `blog_link` ORDER BY id desc LIMIT 20 [ RunTime:0.000270s ]
+---------------------------------------------------------------
+[ 2017-09-12T18:30:02+08:00 ] 127.0.0.1 127.0.0.1 GET /uploadabout20170823ccc94ec9d86efa543a1c9be377be3355.jpg
+[ info ] lei.cn/uploadabout20170823ccc94ec9d86efa543a1c9be377be3355.jpg [运行时间：0.028320s][吞吐率：35.31req/s] [内存消耗：1,152.62kb] [文件加载：37]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploadabout20170823ccc94ec9d86efa543a1c9be377be3355.jpg',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:30:02+08:00 ] 127.0.0.1 127.0.0.1 GET /indexArticleList.html
+[ info ] lei.cn/indexArticleList.html [运行时间：0.213365s][吞吐率：4.69req/s] [内存消耗：2,597.62kb] [文件加载：65]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'api.Index',
+    2 => 'getArticleListApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\api\Index->getArticleListApi[ F:\halloword\xinleiBlog\application\index\controller\api\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003893s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_author_about` [ RunTime:0.039528s ]
+[ sql ] [ SQL ] SELECT `top_img`,`name`,`introduce`,`address`,`qq_link`,`email_link`,`sina_link`,`git_link` FROM `blog_author_about` LIMIT 1 [ RunTime:0.000502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.030320s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`description`,`type_id`,`cover`,`top`,`recommend`,`edit_time`,`click`,`user_id` FROM `blog_article` WHERE  (  `type_id` LIKE '%' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) ORDER BY edit_time desc LIMIT 0,10 [ RunTime:0.001316s ]
+[ sql ] [ SQL ] '%%%'%%%'%'HOW COLUMNS FROM `blog_article_type` [ RunTime:0.031908s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article_type` WHERE  `id` IN (14,3) [ RunTime:0.001622s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_user` [ RunTime:0.031676s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `blog_user` WHERE  `id` IN (1) [ RunTime:0.000268s ]
+---------------------------------------------------------------
+[ 2017-09-12T18:30:02+08:00 ] 127.0.0.1 127.0.0.1 GET /uploadarticle20170806%EF%BF%BDbee5a29ae959ecea5086caf733596db.jpg
+[ info ] lei.cn/uploadarticle20170806%EF%BF%BDbee5a29ae959ecea5086caf733596db.jpg [运行时间：0.017707s][吞吐率：56.48req/s] [内存消耗：1,152.63kb] [文件加载：37]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploadarticle20170806�bee5a29ae959ecea5086caf733596db.jpg',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:30:03+08:00 ] 127.0.0.1 127.0.0.1 GET /uploadarticle201708063d959b388e6157632e70a87e8cc5de06.jpg
+[ info ] lei.cn/uploadarticle201708063d959b388e6157632e70a87e8cc5de06.jpg [运行时间：0.027133s][吞吐率：36.86req/s] [内存消耗：1,152.66kb] [文件加载：37]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploadarticle201708063d959b388e6157632e70a87e8cc5de06.jpg',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:30:03+08:00 ] 127.0.0.1 127.0.0.1 GET /uploadarticle2017080659109e2131893b405041de0603adc022.jpg
+[ info ] lei.cn/uploadarticle2017080659109e2131893b405041de0603adc022.jpg [运行时间：0.019187s][吞吐率：52.12req/s] [内存消耗：1,152.65kb] [文件加载：37]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploadarticle2017080659109e2131893b405041de0603adc022.jpg',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:30:14+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-loginOut.html
+[ info ] lei.cn/admin-loginOut.html [运行时间：0.020435s][吞吐率：48.94req/s] [内存消耗：1,126.48kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Login',
+    2 => 'loginOut',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\show\Login->loginOut[ F:\halloword\xinleiBlog\application\admin\controller\show\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:30:14+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-login.html
+[ info ] lei.cn/admin-login.html [运行时间：0.017159s][吞吐率：58.28req/s] [内存消耗：1,364.66kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\show\Login->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Login.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:30:14+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.017743s][吞吐率：56.36req/s] [内存消耗：1,172.52kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T18:30:16+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.028111s][吞吐率：35.57req/s] [内存消耗：1,172.08kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T23:01:28+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-index.html
+[ info ] lei.cn/admin-index.html [运行时间：0.200904s][吞吐率：4.98req/s] [内存消耗：1,236.52kb] [文件加载：42]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T23:01:28+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-login.html
+[ info ] lei.cn/admin-login.html [运行时间：0.015114s][吞吐率：66.16req/s] [内存消耗：1,364.30kb] [文件加载：43]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\show\Login->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Login.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T23:01:28+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.038700s][吞吐率：25.84req/s] [内存消耗：1,172.06kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T23:01:29+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] lei.cn/captcha.html [运行时间：0.050668s][吞吐率：19.74req/s] [内存消耗：1,172.06kb] [文件加载：36]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\halloword\xinleiBlog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-12T23:01:41+08:00 ] 127.0.0.1 127.0.0.1 POST /admin-loginApi.html
+[ info ] lei.cn/admin-loginApi.html [运行时间：0.373454s][吞吐率：2.68req/s] [内存消耗：2,324.80kb] [文件加载：57]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Login',
+    2 => 'loginApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '40',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'admin',
+  'password' => 'admin',
+  'verify' => 'tgni',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\api\Login->loginApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005534s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_user` [ RunTime:0.020985s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` WHERE  `account` = 'admin' LIMIT 1 [ RunTime:0.001130s ]
+---------------------------------------------------------------
+[ 2017-09-12T23:01:43+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-index.html
+[ info ] lei.cn/admin-index.html [运行时间：0.312341s][吞吐率：3.20req/s] [内存消耗：2,255.16kb] [文件加载：55]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\show\Index->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Index.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_index\index.html [ array (
+  0 => 'showInfo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002628s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_user` [ RunTime:0.017401s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001275s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_user` LIMIT 1 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_user` WHERE  `login_time` BETWEEN '1505145600' AND '1505232000' LIMIT 1 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.016231s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `delete` IS NULL OR `delete` = '' LIMIT 1 [ RunTime:0.000790s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_resource` [ RunTime:0.021450s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_resource` WHERE  `delete` IS NULL OR `delete` = '' LIMIT 1 [ RunTime:0.001262s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_message` [ RunTime:0.022530s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_message` WHERE  `pid` = 0 LIMIT 1 [ RunTime:0.000381s ]
+---------------------------------------------------------------
+[ 2017-09-12T23:01:52+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-article.html
+[ info ] lei.cn/admin-article.html [运行时间：0.183389s][吞吐率：5.45req/s] [内存消耗：2,235.78kb] [文件加载：55]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'show.Article',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\show\Article->index[ F:\halloword\xinleiBlog\application\admin\controller\show\Article.php ]
+[ info ] [ VIEW ] F:\halloword\xinleiBlog\public/../application/admin\view\show\_article\articleList.html [ array (
+  0 => 'type',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000969s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article_type` [ RunTime:0.016913s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article_type` [ RunTime:0.000391s ]
+---------------------------------------------------------------
+[ 2017-09-12T23:01:52+08:00 ] 127.0.0.1 127.0.0.1 POST /articleListApi.html
+[ info ] lei.cn/articleListApi.html [运行时间：0.193827s][吞吐率：5.16req/s] [内存消耗：2,243.67kb] [文件加载：55]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Article',
+    2 => 'articleListApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-article.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '50',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'currentIndex' => '1',
+  'pageSize' => '8',
+  'type_id' => '%',
+  'keywords' => '%',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\api\Article->articleListApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000872s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.010257s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  (  `type_id` LIKE '%' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) LIMIT 1 [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`top`,`recommend`,`edit_time`,`user_id`,`type_id`,`delete` FROM `blog_article` WHERE  (  `type_id` LIKE '%' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) ORDER BY edit_time desc LIMIT 0,8 [ RunTime:0.002055s ]
+[ sql ] [ SQL ] '%%%'%%%'%'HOW COLUMNS FROM `blog_user` [ RunTime:0.030316s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `blog_user` WHERE  `id` IN (1) [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article_type` [ RunTime:0.012670s ]
+[ sql ] [ SQL ] SELECT `id`,`article_type_name` FROM `blog_article_type` WHERE  `id` IN (14,3) [ RunTime:0.000610s ]
+---------------------------------------------------------------
+[ 2017-09-12T23:01:55+08:00 ] 127.0.0.1 127.0.0.1 POST /articleListApi.html
+[ info ] lei.cn/articleListApi.html [运行时间：0.050339s][吞吐率：19.87req/s] [内存消耗：2,235.64kb] [文件加载：55]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Article',
+    2 => 'articleListApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-article.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '48',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'currentIndex' => '1',
+  'pageSize' => '8',
+  'type_id' => '2',
+  'keywords' => '%',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\api\Article->articleListApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001727s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.016371s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  (  `type_id` LIKE '2' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) LIMIT 1 [ RunTime:0.000569s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`top`,`recommend`,`edit_time`,`user_id`,`type_id`,`delete` FROM `blog_article` WHERE  (  `type_id` LIKE '2' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) ORDER BY edit_time desc LIMIT 0,8 [ RunTime:0.000424s ]
+---------------------------------------------------------------
+[ 2017-09-12T23:01:57+08:00 ] 127.0.0.1 127.0.0.1 POST /articleListApi.html
+[ info ] lei.cn/articleListApi.html [运行时间：0.072884s][吞吐率：13.72req/s] [内存消耗：2,243.67kb] [文件加载：55]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Article',
+    2 => 'articleListApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-article.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '50',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'currentIndex' => '1',
+  'pageSize' => '8',
+  'type_id' => '%',
+  'keywords' => '%',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\api\Article->articleListApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000858s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.015456s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  (  `type_id` LIKE '%' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) LIMIT 1 [ RunTime:0.000485s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`top`,`recommend`,`edit_time`,`user_id`,`type_id`,`delete` FROM `blog_article` WHERE  (  `type_id` LIKE '%' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) ORDER BY edit_time desc LIMIT 0,8 [ RunTime:0.001846s ]
+[ sql ] [ SQL ] '%%%'%%%'%'HOW COLUMNS FROM `blog_user` [ RunTime:0.009702s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `blog_user` WHERE  `id` IN (1) [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article_type` [ RunTime:0.010803s ]
+[ sql ] [ SQL ] SELECT `id`,`article_type_name` FROM `blog_article_type` WHERE  `id` IN (14,3) [ RunTime:0.000282s ]
+---------------------------------------------------------------
+[ 2017-09-12T23:01:59+08:00 ] 127.0.0.1 127.0.0.1 POST /articleListApi.html
+[ info ] lei.cn/articleListApi.html [运行时间：0.049435s][吞吐率：20.23req/s] [内存消耗：2,235.64kb] [文件加载：55]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Article',
+    2 => 'articleListApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-article.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '48',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'currentIndex' => '1',
+  'pageSize' => '8',
+  'type_id' => '1',
+  'keywords' => '%',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\api\Article->articleListApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000889s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.017499s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  (  `type_id` LIKE '1' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) LIMIT 1 [ RunTime:0.000471s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`top`,`recommend`,`edit_time`,`user_id`,`type_id`,`delete` FROM `blog_article` WHERE  (  `type_id` LIKE '1' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) ORDER BY edit_time desc LIMIT 0,8 [ RunTime:0.000448s ]
+---------------------------------------------------------------
+[ 2017-09-12T23:02:01+08:00 ] 127.0.0.1 127.0.0.1 POST /articleListApi.html
+[ info ] lei.cn/articleListApi.html [运行时间：0.046155s][吞吐率：21.67req/s] [内存消耗：2,235.64kb] [文件加载：55]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Article',
+    2 => 'articleListApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-article.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '48',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'currentIndex' => '1',
+  'pageSize' => '8',
+  'type_id' => '4',
+  'keywords' => '%',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\api\Article->articleListApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000835s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.014542s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  (  `type_id` LIKE '4' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) LIMIT 1 [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`top`,`recommend`,`edit_time`,`user_id`,`type_id`,`delete` FROM `blog_article` WHERE  (  `type_id` LIKE '4' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) ORDER BY edit_time desc LIMIT 0,8 [ RunTime:0.000429s ]
+---------------------------------------------------------------
+[ 2017-09-12T23:02:02+08:00 ] 127.0.0.1 127.0.0.1 POST /articleListApi.html
+[ info ] lei.cn/articleListApi.html [运行时间：0.072011s][吞吐率：13.89req/s] [内存消耗：2,242.91kb] [文件加载：55]
+[ info ] [ LANG ] F:\halloword\xinleiBlog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api.Article',
+    2 => 'articleListApi',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b5f8kuocmm500659nk2dtbice3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lei.cn/admin-article.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lei.cn',
+  'accept' => '*/*',
+  'content-length' => '48',
+  'connection' => 'close',
+  'host' => 'lei.cn',
+)
+[ info ] [ PARAM ] array (
+  'currentIndex' => '1',
+  'pageSize' => '8',
+  'type_id' => '3',
+  'keywords' => '%',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\api\Article->articleListApi[ F:\halloword\xinleiBlog\application\admin\controller\api\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000897s ] mysql:dbname=xinleiblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.014493s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  (  `type_id` LIKE '3' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) LIMIT 1 [ RunTime:0.000521s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`top`,`recommend`,`edit_time`,`user_id`,`type_id`,`delete` FROM `blog_article` WHERE  (  `type_id` LIKE '3' AND ((`title` LIKE '%%%' OR `description` LIKE '%%%') AND (`delete` is null OR `delete` = '')) ) ORDER BY edit_time desc LIMIT 0,8 [ RunTime:0.001330s ]
+[ sql ] [ SQL ] '%%%'%%%'3'HOW COLUMNS FROM `blog_user` [ RunTime:0.010171s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `blog_user` WHERE  `id` IN (1) [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article_type` [ RunTime:0.011224s ]
+[ sql ] [ SQL ] SELECT `id`,`article_type_name` FROM `blog_article_type` WHERE  `id` IN (3) [ RunTime:0.000324s ]

@@ -1,0 +1,20 @@
+<?php
+/**
+ * Created by 信磊.
+ * Date: 2017/8/4
+ * Time: 15:53
+ */
+
+namespace app\index\controller\show;
+
+use app\index\model\Index as IndexModel;
+
+class Index extends BaseController
+{
+    public function index(IndexModel $indexModel)
+    {
+        $sideData =$indexModel->sideData();
+        return view('index',['sideData' => $sideData]);
+    }
+
+}

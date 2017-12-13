@@ -1,0 +1,26 @@
+<?php
+/**
+ * Created by 信磊.
+ * Date: 2017/8/4
+ * Time: 15:53
+ */
+
+namespace app\index\controller\show;
+
+use app\index\model\Index as IndexModel;
+use think\Exception;
+
+class Index extends BaseController
+{
+    public function index(IndexModel $indexModel)
+    {
+        $sideData = $indexModel->sideData();
+        //获取天气数据
+        $weatherObj = $indexModel->weather();
+        try{
+            return view('index', ['sideData' => $sideData, 'weather' => $weatherObj->result]);
+        }catch(Exception $e){}
+
+    }
+
+}

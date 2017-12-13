@@ -1,0 +1,219 @@
+<?php
+/**
+ * Created by 信磊.
+ * Date: 2017/8/1
+ * Time: 22:50
+ */
+
+namespace app\admin\model;
+
+
+use think\Cache;
+use think\Exception;
+use think\Image;
+use think\Request;
+
+class Resource extends BaseModel
+{
+    public function getResourceType()
+    {
+        return $this->hasOne('ResourceType', 'id', 'type_id');
+    }
+
+    public function getUser()
+    {
+        return $this->hasOne('User', 'id', 'user_id')->field('id,name');
+    }
+
+    //资源列表数据
+    public function resourceList($currentIndex, $pageSize, $type_id, $keywords)
+    {
+        $count = $this->where("`type_id` LIKE ? AND ((`title` LIKE ? OR `desc` LIKE ?) AND (`delete` is null OR `delete` = ''))", [$type_id, '%'.$keywords.'%', '%'.$keywords.'%'])
+            ->count(); //总记录数
+        $pages = ceil($count / $pageSize); //总页数
+        $data = $this->with('getResourceType,getUser')
+            ->where("`type_id` LIKE ? AND ((`title` LIKE ? OR `desc` LIKE ?) AND (`delete` is null OR `delete` = ''))", [$type_id, '%'.$keywords.'%', '%'.$keywords.'%'])
+            ->limit($pageSize * ($currentIndex - 1), $pageSize)
+            ->field(['id','title','link','user_id','type_id','edit_time'])
+            ->order('edit_time desc')
+            ->select();
+        $num = 0;
+        foreach ($data as $v) {
+            //为了前端能正常识别，将文章和用户的关联数组进行数组转维
+            $data[$num]['user_name'] = $v['get_user']['name'];
+            $data[$num]['resource_type_name'] = $v['get_resource_type']['resource_type_name'];
+            //格式化时间戳
+            $data[$num]['edit_time'] = date('Y-m-d H:i', $v['edit_time']);
+            $num++;
+        }
+        $data['pages'] = $pages;
+        return $data;
+    }
+
+    //封面上传
+    public function uploadResourceCover()
+    {
+        try {
+            $id = $this->max('id') + 1;
+            //同一窗口不是第一次点击上传，则进行旧图片删除
+            if (is_file($old_img = '.' . Cache::get('resource_cover_upload_id_' . $id))) {
+                unlink($old_img);
+            }
+            $cover = Request::instance()->file('cover');
+            //移动文件
+            $CoverInfo = $cover->move(UPLOAD_PATH . 'upload' . DS . 'resource');
+            $upload_file = UPLOAD_PATH . 'upload' . DS . 'resource' . DS . $CoverInfo->getSaveName();
+            $show_file = SHOW_PATH . 'upload' . DS . 'resource' . DS . $CoverInfo->getSaveName();
+            if (!is_file($upload_file)) {
+                $data = [
+                    'code' => $this->code,
+                    'msg' => $this->msg,
+                    'data' => $this->data
+                ];
+                return json($data);
+            }
+
+            //生成缩略图
+            $image = Image::open($upload_file);
+            $image->thumb(256.938, 148, Image::THUMB_FIXED)->save($upload_file);
+
+            //将待添加的封面路径存入缓存中
+            Cache::set('resource_cover_upload_id_' . $id, $show_file);
+            $data = [
+                'code' => 200,
+                'msg' => '上传成功',
+                'data' => [
+                    'src' => $show_file
+                ]
+            ];
+            return json($data);
+        }catch(Exception $e){
+            $data = [
+                'code' => $e->getCode(),
+                'msg' => $e->getMessage(),
+                'data' => $e->getData()
+            ];
+            return json($data);
+        }
+    }
+
+    //添加资源
+    public function addResource($data)
+    {
+        $data['cover'] = $data['cover_src'];
+        unset($data['cover_src']);
+        //发布人
+        $data['user_id'] = session('id');
+        //编辑时间
+        $data['edit_time'] = time();
+        $res = $this->data($data)->save();
+        return $res < 1 ? false : true;
+    }
+
+    //封面修改
+    public function editResourceCover()
+    {
+        $id =input('id');
+        //同一窗口不是第一次点击上传，则进行旧图片删除
+        if(is_file($old_img = '.' . Cache::get('resource_cover_edit_id_' . $id))){
+            unlink($old_img);
+        }
+        $cover = Request::instance()->file('cover');
+        //移动文件
+        $CoverInfo = $cover->move(UPLOAD_PATH . 'upload' . DS . 'resource');
+        $upload_file = UPLOAD_PATH . 'upload' . DS . 'resource' . DS . $CoverInfo->getSaveName();
+        $show_file = SHOW_PATH . 'upload' . DS . 'resource' . DS . $CoverInfo->getSaveName();
+        if (!is_file($upload_file)) {
+            $data = [
+                'code' => $this->code,
+                'msg' => $this->msg,
+                'data' => $this->data
+            ];
+            return json($data);
+        }
+
+        //生成缩略图
+        $image = Image::open($upload_file);
+        $image->thumb(256.938, 148, Image::THUMB_FIXED)->save($upload_file);
+        //将待修改的封面路径存入缓存中
+        Cache::set('resource_cover_edit_id_' . $id, $show_file);
+        $data = [
+            'code' => 200,
+            'msg' => '上传成功',
+            'data' => [
+                'src' => $show_file
+            ]
+        ];
+        return json($data);
+    }
+
+
+    //编辑资源
+    public function editResource($data)
+    {
+        if(!empty($data['cover_src'])){
+            $data['cover'] = $data['cover_src'];
+            unset($data['cover_src']);
+        }else{
+            unset($data['cover']);
+            unset($data['cover_src']);
+        }
+        //发布人
+        $data['user_id'] = session('id');
+        //编辑时间
+        $data['edit_time'] = time();
+        $res = $this->save($data,['id'=>$data['id']]);
+        return $res < 1 ? false : true;
+    }
+
+    //资源加入回收站
+    public function recycleResource(){
+        $id = Request::instance()->post('id');
+        if($this->where('id','=',$id)->update(['delete'=>time()])){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    //资源回收站删除
+    public function recycleResourceDelete(){
+        $id = Request::instance()->post('id');
+        if($this->where('id','=',$id)->delete()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    //资源回收站恢复
+    public function recoveryResourceRecycle(){
+        $id = Request::instance()->post('id');
+        if($this->where('id','=',$id)->update(['delete'=>null])){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    //资源回收站列表数据
+    public function resourceRecycle($currentIndex, $pageSize)
+    {
+        $count = $this->where('delete','neq','')->count(); //总记录数
+        $pages = ceil($count / $pageSize); //总页数
+        $data = $this->with('getResourceType,getUser')
+            ->where('delete','neq','')
+            ->limit($pageSize * ($currentIndex - 1), $pageSize)
+            ->field(['id','title','link','user_id','type_id','edit_time'])
+            ->select();
+        $num = 0;
+        foreach ($data as $v) {
+            //为了前端能正常识别，将文章和用户的关联数组进行数组转维
+            $data[$num]['user_name'] = $v['get_user']['name'];
+            $data[$num]['resource_type_name'] = $v['get_resource_type']['resource_type_name'];
+            //格式化时间戳
+            $data[$num]['edit_time'] = date('Y-m-d H:i', $v['edit_time']);
+            $num++;
+        }
+        $data['pages'] = $pages;
+        return $data;
+    }
+}

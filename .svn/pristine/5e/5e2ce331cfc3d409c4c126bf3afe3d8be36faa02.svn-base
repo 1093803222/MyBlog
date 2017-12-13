@@ -1,0 +1,14 @@
+
+.weather-top{
+    height:20px;
+}
+.weather-city{
+    color: #808080;
+    margin:0;
+    float: left;
+}
+.weather-time{
+    color: #808080;
+    margin:0;
+    float: right;
+}

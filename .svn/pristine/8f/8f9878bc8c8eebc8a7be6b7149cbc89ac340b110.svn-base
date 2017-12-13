@@ -1,0 +1,64 @@
+
+.weather-top{
+    height:20px;
+}
+.weather-city{
+    color: #808080;
+    margin:0;
+    float: left;
+}
+.weather-time{
+    color: #808080;
+    margin:0;
+    float: right;
+}
+.weather-info2{
+    width:100%;
+    height:80px;
+}
+.weather-info2-left{
+    height: 100%;width:30%;text-align: center;margin-left: 20%;float:left;
+}
+.weather-sheShiDu{
+    font-size:60px;
+    float: left;
+}
+.du{
+    float: left;
+    width:20px;
+    font-size:20px;
+    margin-top:5px;
+}
+.weather-info2-right{
+    width:40%;
+    float:left;
+}
+
+.weather-info2-right div{
+    line-height:1.5;
+    text-align: left;
+    font-weight: 700;
+    font-style:italic;
+    color: #10b7f5;
+
+}
+
+.weather-info3-index{
+    margin-left: 10%;
+    margin-bottom: 20px;
+    width:40%;
+    float:left;
+}
+
+.weather-info3-index div{
+    line-height:1.5;
+    text-align: left;
+    font-weight: 700;
+    font-size:20px;
+    font-style:italic;
+    color: #10b7f5;
+    border-bottom: #f7edee solid 2px;
+    line-height: 2;
+}
+
+

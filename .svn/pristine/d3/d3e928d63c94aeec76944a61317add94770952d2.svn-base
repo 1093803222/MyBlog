@@ -1,0 +1,133 @@
+<?php
+/**
+ * Created by 信磊.
+ * Date: 2017/8/6
+ * Time: 14:47
+ */
+
+namespace app\index\controller\show;
+
+
+use think\Controller;
+use think\Db;
+use think\Exception;
+use think\Loader;
+use think\View;
+
+//引入新浪微博SDK
+Loader::import('Weibo.saetv2', EXTEND_PATH, '.ex.class.php');
+
+class BaseController extends Controller
+{
+    public function __construct()
+    {
+        if (session('token')) {
+            if (!isset(session('weibo')['id'])) {
+                //实例化新浪SDK，传入app_key和app_secret
+                $o = new \SaeTClientV2(config('Sina.app_key'), config('Sina.app_secret'), session('token')['access_token']);
+                //获取uid
+                $uid = $o->get_uid();
+                //根据uid获取用户基本资料和最新的微博
+                $weiboData = $o->show_user_by_id($uid['uid']);
+                session('weibo', $weiboData);
+                if (isset($weiboData['id'])) {
+                    //存入数据库
+                    $data = [
+                        'uid' => $weiboData['id'],
+                        'name' => $weiboData['name'],
+                        'city' => $weiboData['city'],
+                        'profile_image_url_50' => $weiboData['profile_image_url'],
+                        'profile_image_url_180' => $weiboData['avatar_large'],
+                        'profile_image_url_1024' => $weiboData['avatar_hd'],
+                        'ip' => request()->ip()
+                    ];
+                    try {
+                        Db::table('blog_weibo')->insert($data);
+                    } catch (Exception $e) {
+                    }
+                    //查询登陆的是否是管理员
+                    $admin = Db::table('blog_weibo')
+                        ->where('admin', '=', 'admin')
+                        ->where('uid', '=', $weiboData['id'])
+                        ->value('admin');
+                    if ($admin) {
+                        View::share('admin', $admin);
+                    }
+                    //分发微博数据模板变量
+                    View::share([
+                        'name' => $weiboData['name'],               //微博昵称
+                        'top' => $weiboData['profile_image_url']    //微博头像
+                    ]);
+                }
+            } else {
+                //查询登陆的是否是管理员
+                $admin = Db::table('blog_weibo')
+                    ->where('admin', '=', 'admin')
+                    ->where('uid', '=', session('weibo')['id'])
+                    ->value('admin');
+                if ($admin) {
+                    View::share('admin', $admin);
+                }
+                //分发微博数据模板变量
+                View::share([
+                    'name' => session('weibo')['name'],               //微博昵称
+                    'top' => session('weibo')['profile_image_url']    //微博头像
+                ]);
+            }
+        }
+
+        //首页个人信息
+        $myData = Db::table('blog_author_about')
+            ->field('top_img,name,introduce,address,qq_link,email_link,sina_link,git_link')
+            ->find();
+
+        $fileName = basename($_SERVER['PATH_INFO']);
+        $title = '文海阁';
+        View::share(['fileName' => $fileName, 'title' => $title, 'myData' => $myData]);
+
+    }
+
+    public function login()
+    {
+        //实例化新浪SDK，传入app_key和app_secret
+        $o = new \SaeTOAuthV2(config('Sina.app_key'), config('Sina.app_secret'));
+        //得到授权页
+        $code_url = $o->getAuthorizeURL(config('Sina.callback_url'));
+        return view('public/login', ['code_url' => $code_url]);
+    }
+
+    //新浪第三方登陆
+    public function sinaLogin()
+    {
+
+        //实例化新浪SDK，传入app_key和app_secret
+        $o = new \SaeTOAuthV2(config('Sina.app_key'), config('Sina.app_secret'));
+        if (isset($_REQUEST['code'])) {
+            $keys = array();
+            $keys['code'] = $_REQUEST['code'];
+            $keys['redirect_uri'] = config('Sina.callback_url');
+            try {
+                //取得token信息
+                $token = $o->getAccessToken('code', $keys);
+            } catch (OAuthException $e) {
+            }
+        }
+
+        if ($token) {
+            //将token存入cookie以及session
+            session('token', $token);
+            setcookie('weibo_' . $o->client_id, http_build_query($token));
+            return 1;
+        } else {
+            return 0;
+        }
+
+    }
+
+    //退出登陆
+    public function loginOut()
+    {
+        session(null);
+    }
+
+}

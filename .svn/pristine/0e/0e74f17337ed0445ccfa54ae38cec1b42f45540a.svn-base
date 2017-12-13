@@ -1,0 +1,55 @@
+//@ sourceURL=article-add.js
+layui.use(['form', 'upload', 'layer'], function () {
+    var form = layui.form();
+    var $ = layui.jquery;
+    var layer = layui.layer;
+    $(function () {
+        var content = "";
+        kedit('#editor_id', content);   //初始化编辑器
+    })
+    //图片上传
+    var index;
+    layui.upload({
+        url: '/api/Admin/UploadCover',
+        elem: '#articleCoverInput',
+        method: 'post',
+        before: function (input) {
+            index = layer.load(1);
+        },
+        success: function (res) {
+            layer.close(index);
+            if (res.Success) {
+                $('#articleCoverSrc').val(res.Data);
+                $("#articleCoverImg").attr('src', res.Data);
+            }
+            layer.msg(res.Message);
+        }
+    });
+    //监听添加提交
+    form.on('submit(formAddArticle)', function (data) {
+        var index = layer.load(1);
+        $.ajax({
+            type: "POST",
+            contentType: 'application/json',
+            url: '/api/Admin/ReleaseArticle',
+            data: JSON.stringify(data.field),
+            datatype: 'json',
+            async: false,
+            success: function (res) {
+                layer.close(index);
+                if (res.Success) {
+                    layer.msg(res.Message);
+                    initilArticle(1, 4);
+                } else {
+                    layer.msg(res.Message);
+                }
+            },
+            error: function (e) {
+                layer.close(index);
+                layer.msg(e.responseText);
+            }
+        });
+        return false;
+    });
+    form.render(); //更新全部
+});

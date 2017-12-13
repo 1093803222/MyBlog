@@ -1,0 +1,74 @@
+<?php
+/**
+ * Created by 信磊.
+ * Date: 2017/8/1
+ * Time: 22:45
+ */
+
+namespace app\admin\controller\api;
+
+use think\Request;
+use app\admin\controller\show\BaseController;
+use app\admin\model\Resource as ResourceModel;
+
+class Resource extends BaseController
+{
+    //资源列表数据
+    public function resourceListApi(ResourceModel $resourceModel, $currentIndex, $pageSize)
+    {
+        return $resourceModel->resourceList($currentIndex, $pageSize);
+    }
+
+    //封面上传
+    public function uploadResourceCoverApi(ResourceModel $resourceModel)
+    {
+        return $resourceModel->uploadResourceCover();
+    }
+
+    //添加资源接口
+    public function addResourceApi(ResourceModel $resourceModel)
+    {
+        $data = Request::instance()->param();
+        //验证数据
+        $checkRes = $this->validate($data, 'Resource');
+        if (true !== $checkRes) {
+            return $checkRes;
+        }
+        return $resourceModel->addResource($data);
+    }
+
+    //封面修改
+    public function editResourceCoverApi(ResourceModel $resourceModel){
+        return $resourceModel->editResourceCover();
+    }
+    //编辑资源接口
+    public function editResourceApi(ResourceModel $resourceModel)
+    {
+        $data = Request::instance()->param();
+        //验证数据
+        $checkRes = $this->validate($data, 'Resource.edit');
+        if (true !== $checkRes) {
+            return $checkRes;
+        }
+        return $resourceModel->editResource($data);
+    }
+
+    //资源加入回收站
+    public function recycleResourceApi(ResourceModel $resourceModel){
+        return $resourceModel->recycleResource();
+    }
+
+    //资源回收站列表数据
+    public function resourceRecycleApi(ResourceModel $resourceModel, $currentIndex, $pageSize)
+    {
+        return $resourceModel->resourceRecycle($currentIndex, $pageSize);
+    }
+    //资源回收站删除
+    public function deleteResourceRecycleApi(ResourceModel $resourceModel){
+        return $resourceModel->deleteResourceRecycle();
+    }
+    //资源回收站恢复
+    public function recoveryResourceRecycleApi(ResourceModel $resourceModel){
+        return $resourceModel->recoveryResourceRecycle();
+    }
+}

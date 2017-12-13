@@ -1,0 +1,175 @@
+<?php
+// +----------------------------------------------------------------------
+// | ThinkPHP [ WE CAN DO IT JUST THINK ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2006~2016 http://thinkphp.cn All rights reserved.
+// +----------------------------------------------------------------------
+// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+// +----------------------------------------------------------------------
+// | Author: liu21st <liu21st@gmail.com>
+// +----------------------------------------------------------------------
+//
+use think\Route;
+
+//后台登陆
+Route::rule('admin-login', 'admin/show.Login/index');
+//后台登陆验证接口
+Route::rule('admin-loginApi', 'admin/api.Login/loginApi');
+//注销登陆
+Route::rule('admin-loginOut', 'admin/show.Login/loginOut');
+//检测是否登陆
+Route::rule('checkAdminLogin', 'admin/show.BaseController/__construct');
+//后台主页
+Route::rule('admin-index', 'admin/show.Index/index');
+
+//文章分类名称列表
+Route::rule('admin-article-type-list', 'admin/show.ArticleType/index');
+//文章分类添加页
+Route::rule('addArticleType', 'admin/show.ArticleType/addArticleType');
+//文章分类编辑页
+Route::rule('editArticleType/:id', 'admin/show.ArticleType/editArticleType');
+//文章分类添加数据
+Route::rule('addArticleTypeApi', 'admin/api.ArticleType/addArticleTypeApi');
+//文章分类编辑数据
+Route::rule('editArticleTypeApi', 'admin/api.ArticleType/editArticleTypeApi');
+//文章分类列表数据
+Route::rule('articleTypeListApi', 'admin/api.ArticleType/articleTypeListApi');
+//文章分类删除数据
+Route::rule('articleTypeDeleteApi/:id', 'admin/api.ArticleType/articleTypeDeleteApi');
+
+//文章列表
+Route::rule('admin-article', 'admin/show.Article/index');
+//发表文章
+Route::rule('addArticle', 'admin/show.Article/addArticle');
+//编辑文章
+Route::rule('editArticle/:id', 'admin/show.Article/editArticle');
+//文章列表数据接口
+Route::rule('articleListApi', 'admin/api.Article/articleListApi');
+//文章Checked监听接口
+Route::rule('setArticleChecked', 'admin/api.Article/setArticleChecked');
+//上传文章封面
+Route::rule('uploadArticleCoverApi', 'admin/api.Article/uploadArticleCoverApi');
+//修改文章封面
+Route::rule('editArticleCoverApi', 'admin/api.Article/editArticleCoverApi');
+//发表文章数据接口
+Route::rule('addArticleApi', 'admin/api.Article/addArticleApi');
+//修改文章数据接口
+Route::rule('editArticleApi', 'admin/api.Article/editArticleApi');
+//监听取消或发布文章窗口回调接口
+Route::rule('closeIframeArticle', 'admin/api.Article/closeIframeArticle');
+//文章删除接口
+Route::rule('deleteArticleApi', 'admin/api.Article/deleteArticleApi');
+
+//用户列表页
+Route::rule('userList', 'admin/show.User/index');
+//添加用户页
+Route::rule('addUserPage', 'admin/show.User/addUserPage');
+//设置黑名单
+Route::rule('setBlackListApi', 'admin/api.User/setBlackListApi');
+//编辑用户页
+Route::rule('editUserPage/:id', 'admin/show.User/editUserPage');
+//获取权限
+Route::rule('getPowerGroup', 'admin/api.Power/getPower');
+//添加用户数据
+Route::rule('addUserApi', 'admin/api.User/addUserApi');
+//用户列表数据
+Route::rule('userListApi', 'admin/api.User/userListApi');
+//编辑用户数据
+Route::rule('editUserApi', 'admin/api.User/editUserApi');
+//删除用户数据
+Route::rule('deleteUserApi', 'admin/api.User/deleteUserApi');
+
+//资源分类列表
+Route::rule('admin-resource-type', 'admin/show.ResourceType/index');
+//资源分类添加
+Route::rule('addResourceType', 'admin/show.ResourceType/addResourceType');
+//资源分类编辑页
+Route::rule('editResourceType/:id', 'admin/show.ResourceType/editResourceType');
+//资源分类列表数据
+Route::rule('resourceTypeListApi', 'admin/api.ResourceType/resourceTypeListApi');
+//资源分类添加接口
+Route::rule('addResourceTypeApi', 'admin/api.ResourceType/addResourceTypeApi');
+//资源分类编辑接口
+Route::rule('editResourceTypeApi', 'admin/api.ResourceType/editResourceTypeApi');
+//资源分类删除接口
+Route::rule('resourceTypeDeleteApi/:id', 'admin/api.ResourceType/resourceTypeDeleteApi');
+
+//资源列表
+Route::rule('admin-resource', 'admin/show.Resource/index');
+//资源添加
+Route::rule('addResource', 'admin/show.Resource/addResource');
+//资源编辑
+Route::rule('editResource/:id', 'admin/show.Resource/editResource');
+//资源列表接口
+Route::rule('resourceListApi','admin/api.Resource/resourceListApi');
+//资源封面上传接口
+Route::rule('uploadResourceCoverApi', 'admin/api.Resource/uploadResourceCoverApi');
+//资源添加接口
+Route::rule('addResourceApi', 'admin/api.Resource/addResourceApi');
+//资源编辑接口
+Route::rule('editResourceApi', 'admin/api.Resource/editResourceApi');
+//资源封面修改接口
+Route::rule('editResourceCoverApi', 'admin/api.Resource/editResourceCoverApi');
+//资源加入回收站
+Route::rule('recycleResourceApi', 'admin/api.Resource/recycleResourceApi');
+
+//时光轴列表页
+Route::rule('admin-timeline', 'admin/show.Timeline/index');
+//时光轴列表数据接口
+Route::rule('timelineApi', 'admin/api.Timeline/timelineApi');
+//时光轴删除接口
+Route::rule('deleteTimelineApi/:id', 'admin/api.Timeline/deleteTimelineApi');
+
+//时光轴列表页
+Route::rule('admin-note', 'admin/show.Note/index');
+//时光轴列表数据接口
+Route::rule('noteApi', 'admin/api.Note/noteApi');
+//时光轴删除接口
+Route::rule('deleteNoteApi/:id', 'admin/api.Note/deleteNoteApi');
+
+//文章回收站
+Route::rule('article-recycle', 'admin/show.Article/articleRecycle');
+//文章回收站列表数据
+Route::rule('articleRecycleListApi', 'admin/api.Article/articleRecycleListApi');
+//文章回收站删除数据
+Route::rule('deleteArticleRecycleApi', 'admin/api.Article/deleteArticleRecycleApi');
+//文章回收站恢复数据
+Route::rule('recoveryArticleRecycleApi', 'admin/api.Article/recoveryArticleRecycleApi');
+
+//资源回收站
+Route::rule('resource-recycle', 'admin/show.Resource/resourceRecycle');
+//资源回收站列表数据
+Route::rule('resourceRecycleApi', 'admin/api.Resource/resourceRecycleApi');
+//资源回收站删除数据
+Route::rule('deleteResourceRecycleApi', 'admin/api.Resource/deleteResourceRecycleApi');
+//资源回收站恢复数据
+Route::rule('recoveryResourceRecycleApi', 'admin/api.Resource/recoveryResourceRecycleApi');
+
+//关于作者
+Route::rule('admin-author','admin/show.About/aboutAuthor');
+//上传图片接口
+Route::rule('uploadImgApi','admin/api.About/uploadImgApi');
+//更新关于作者资料
+Route::rule('editAboutAuthorApi','admin/api.About/editAboutAuthorApi');
+
+//友情链接
+Route::rule('admin-link','admin/show.About/aboutLink');
+//更新友情链接资料
+Route::rule('editAboutLinkApi','admin/api.About/editAboutLinkApi');
+//添加友情链接
+Route::rule('addLinkApi','admin/api.About/addLinkApi');
+
+//留言墙
+Route::rule('admin-message','admin/show.About/aboutMessage');
+
+
+return [
+    '__pattern__' => [
+        'name' => '\w+',
+    ],
+    '[hello]' => [
+        ':id' => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
+        ':name' => ['index/hello', ['method' => 'post']],
+    ],
+
+];

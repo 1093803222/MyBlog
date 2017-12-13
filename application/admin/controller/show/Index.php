@@ -1,0 +1,21 @@
+<?php
+/**
+ * Created by 信磊.
+ * Date: 2017/7/23
+ * Time: 16:33
+ */
+
+namespace app\admin\controller\show;
+
+use app\admin\model\Index as IndexModel;
+use think\View;
+
+class Index extends BaseController
+{
+    public function index (IndexModel $indexModel)
+    {
+        $showInfo = $indexModel->showInfo();
+        View::share('showInfo', $showInfo);
+        return view();
+    }
+}

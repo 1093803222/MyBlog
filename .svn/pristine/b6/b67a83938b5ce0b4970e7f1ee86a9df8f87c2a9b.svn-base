@@ -1,0 +1,16 @@
+<?php
+/**
+ * Created by 信磊.
+ * Date: 2017/7/23
+ * Time: 16:33
+ */
+
+namespace app\admin\controller\show;
+
+
+class Index extends BaseController
+{
+    public function index(){
+        return view();
+    }
+}

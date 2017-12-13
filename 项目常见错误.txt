@@ -1,0 +1,5 @@
+
+1,Deprecated: Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+解决：在php.ini里把always_populate_raw_post_data = -1 的注释去掉即可
+
+2，将php.ini里的session设为自动开启，设置session.auto_start = 1

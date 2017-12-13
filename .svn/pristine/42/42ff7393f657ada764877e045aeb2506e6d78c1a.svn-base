@@ -1,0 +1,13 @@
+
+layui.use(['layer'],function(){
+    var $ = layui.jquery,
+        layer = layui.layer;
+
+    $.ajax({
+        type: 'POST',
+        url: '',
+        success: function(res){
+            console.log(res);
+        }
+    });
+});

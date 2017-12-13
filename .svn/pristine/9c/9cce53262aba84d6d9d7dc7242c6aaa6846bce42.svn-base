@@ -1,0 +1,100 @@
+<?php
+/**
+ * Created by 信磊.
+ * Date: 2017/8/6
+ * Time: 18:44
+ */
+
+namespace app\index\model;
+
+use think\Db;
+class Index extends BaseModel
+{
+    /**
+     * 获取文章列表
+     * @param int $pageSize |int 每次刷新获取的数量
+     * @param int $pageIndex |int 每次刷新索引
+     * @param string $type_id
+     * @param string $keywords 关键字
+     * @return html
+     */
+    public function getArticleList($pageSize = 10, $pageIndex = 1, $type_id = '%', $keywords = "")
+    {
+        $data = (new Article)->with('getArticleType,getUser')
+            ->where("`type_id` LIKE ? AND ((`title` LIKE ? OR `description` LIKE ?) AND (`delete` is null OR `delete` = ''))", [$type_id, '%'.$keywords.'%', '%'.$keywords.'%'])
+            ->limit($pageSize * ($pageIndex - 1), $pageSize)
+            ->field(['id','title','description','type_id','cover','top','recommend','edit_time','click','user_id'])
+            ->order('edit_time desc')
+            ->select();
+        $num = 0;
+        $str = '';
+        foreach ($data as $v) {
+            //为了前端能正常识别，将文章和用户的关联数组进行数组转维
+            $v['user_name'] = $v['get_user']['name'];
+            $v['article_type_name'] = $v['get_article_type']['article_type_name'];
+            //格式化时间戳
+            $v['edit_time'] = date('Y-m-d H:i', $v['edit_time']);
+            //文章 url
+            $url = 'detail/' . $v['id'] . '.html';
+            $str .= <<<LIST
+            <div class="article shadow">
+                <div class="article-left">
+                    <img src="{$v['cover']}" alt="{$v['cover']}" />
+                </div>
+                <div class="article-right">
+                    <div class="article-title">
+                        <a href="{$url}">{$v['title']}</a>
+                    </div>
+                    <div class="article-abstract">
+                    {$v['description']}
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="article-footer">
+                    <span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{$v['edit_time']}</span>
+                    <span class="article-author"><i class="fa fa-user"></i>&nbsp;&nbsp;{$v['user_name']}</span>
+                    <span><i class="fa fa-tag"></i>&nbsp;&nbsp;<a href="#">{$v['article_type_name']}</a></span>
+                    <span class="article-viewinfo"><i class="fa fa-eye"></i>&nbsp;{$v['click']}</span>
+                    <span class="article-viewinfo"><i class="fa fa-commenting"></i>&nbsp;4</span>
+                </div>
+            </div>
+LIST;
+            $num++;
+        }
+
+        return $str;
+    }
+
+    //侧边列表
+    public function sideData(){
+        $side['articleHot'] = Db::table('blog_article')
+            ->where("`delete` is null OR `delete` = ''")
+            ->order('click desc')
+            ->field('id,title')
+            ->limit(10)
+            ->select();
+        $side['resources'] = Db::table('blog_resource')
+            ->where("`delete` is null OR `delete` = ''")
+            ->order('edit_time desc')
+            ->field('title,link')
+            ->limit(10)
+            ->select();
+        $side['link'] = Db::table('blog_link')
+            ->order('id desc')
+            ->field('link_name,link_url')
+            ->limit(20)
+            ->select();
+
+        return $side;
+    }
+
+    //天气
+    public function weather(){
+        try{
+            echo 0=0;
+        }catch(Exception $e){
+            throw $e->getMessage();
+        }
+    }
+
+}
